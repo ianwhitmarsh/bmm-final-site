@@ -121,10 +121,8 @@ var SHOWCASE = [
 ['Land + Legacy Custom Homes','land-and-legacy-website-social','Website Design + Social Media Management','landandlegacyok.com','/img/AecMo2i1f5n8YvYBJljE6Vxwlho.webp?width=1030&height=786'],
 ['Rhiannon Thoreson','rhiannon-thoreson-website-social','Website Design + Social Media Management','rhiannonthoreson.com','/showcase/rhiannon.webp'],
 ['Jacob & Associates Realty (JA Realtors)','jacob-associates-realty','Website Design + Development','','/img/axjat4wDwYhCThLePumKLE5pqg.webp?width=1080&height=1350'],
-['918 Family Wellness','918-family-wellness','Website Design & Social Media Management','918familywellness.com','/img/ZxLQ9ifbw45XJmEl9SUV5o5X30.webp?width=1030&height=786'],
 ['Kuykendall Construction','kuykendall-construction','Website Design + Development','kuykendallconstructionok.com','/showcase/kuykendall.webp'],
 ['Luedke Lights & Lawn Care','luedke-lights-lawn-care-website-social','Website Design + Social Media Management','luedkelightsandlawn.com','/showcase/luedke.webp'],
-['Lee Signature Homes','lee-signature-homes-website-social','Website Design + Social Media Management','leesignaturehomesok.com','/showcase/lee-signature.webp'],
 ['Long Tail Farm','long-tail-farm-website','Website Design + Development','ltfarm.com','/showcase/long-tail-farm.webp'],
 ['A Touch Above Holistic Health','a-touch-above-holistic-health-website-design','Website Design + Development','atouchabovehhc.com','/img/YmxvHksav6nLoyOdLRS3jkkzYs.webp?width=1080&height=1350'],
 ['Luxury Finishes Construction','luxury-finishes-construction','Website Design + Development','luxuryfinishesllc.com/home','/showcase/luxury-finishes.webp'],
@@ -165,7 +163,6 @@ var SOCIAL_WORK = [
 var TESTIMONIALS = [
 ["In over 30 years of business, Ian and Big Mammoth Media has been one of the best investments we've made. For over two years, their innovative, results-driven strategies delivered exceptional ROI and directly boosted our growth.", "Joel Wiland", "Owner — J. David Jewelry"],
 ["This team is an A++ for me and my business. GREAT CRM, GREAT MEDIA, GREAT TEACHERS. All in one service to build it to the next level!!", "Dalton Luedke", "Owner — Luedke Lights & Lawn Care"],
-["Thankful for Ian and his team taking over my social media, building us a new website and keeping my sanity as a busy mom of 4. It will get your leads and make you stand out online from the rest!", "Andrea Allen", "Owner — 918 Family Wellness"],
 ["Big Mammoth Media has been a huge help in growing my business. Ian and his team has been nothing short of amazing! I especially love my new CRM to help navigate my day-to-day business.", "Michelle Danielles", "Owner — Health Clinic"]
 ];
 function bmmInit() {

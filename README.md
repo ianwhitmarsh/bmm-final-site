@@ -7,7 +7,7 @@ The Big Mammoth Media marketing site (bigmammothmedia-website.vercel.app): plain
 | Path | What it is |
 |---|---|
 | `*.html` | Main pages: home (`index.html`), about, web design, social media management, podcasting, content sessions, works, contact, blogs, careers, privacy policy, Tulsa social media landing page |
-| `works/` | The 23 project case studies |
+| `works/` | The project case studies |
 | `blogs/` | The blog posts |
 | `careers/` | Job listings |
 | `assets/style.css` | All site styles, including the mobile layout |

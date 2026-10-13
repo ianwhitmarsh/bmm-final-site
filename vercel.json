@@ -3,8 +3,13 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/works/lee-signature-homes-:sep-website-social",
-      "destination": "/works/lee-signature-homes-website-social",
+      "source": "/works/918-family-wellness",
+      "destination": "/works",
+      "permanent": true
+    },
+    {
+      "source": "/works/lee-signature-homes-:rest*",
+      "destination": "/works",
       "permanent": true
     }
   ],
