@@ -214,8 +214,8 @@
       "destination": "https://bmm-main-3.vercel.app/tulsa-social-media-landing.html"
     },
     {
-      "source": "/careers/facebook-\\(meta\\)-ads-manager",
-      "destination": "https://bmm-main-4.vercel.app/careers/facebook-(meta)-ads-manager.html"
+      "source": "/careers/:slug",
+      "destination": "https://bmm-main-4.vercel.app/careers/:slug.html"
     }
   ]
 }
