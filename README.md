@@ -31,6 +31,10 @@ Keep the repo public: GitHub Pages on a free account only serves public repos.
 
 New images go in `img/` as WebP. Keep photos under about 1600px wide; anything shown in a card should also get a 640px copy in `img/t/`. The **Compress site images** workflow (Actions tab, Run workflow) converts any images still linked from Framer.
 
+## Updating styles or scripts
+
+Pages load `/assets/style.css?v=...` and `/assets/script.js?v=...`. After changing either file, bump the `v=` value in every page (a find-and-replace across the repo) so visitors' browsers fetch the new version instead of a cached one.
+
 ## Local preview
 
 Run any static server from the repo root, for example `npx serve .`
