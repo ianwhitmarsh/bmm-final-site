@@ -19,4 +19,8 @@ The 23 project case studies (`/works/...`), the 22 blog posts (`/blogs/...`), `/
 
 ## Deploying
 
-The repo is connected to Vercel, so every push to `main` redeploys the site. To preview locally, run any static server from the repo root, for example `npx serve .`
+The live site is the `bigmammothmedia-website` project on Vercel. Right now the Vercel team is not linked to GitHub, so pushes here do not redeploy automatically. The live site serves `assets/` and `showcase/` from this repo through jsDelivr (`cdn.jsdelivr.net/gh/ianwhitmarsh/bmm-final-site@<commit>/...`), pinned to a specific commit. A change to a CSS, JS or image file goes live when that Vercel project is redeployed with the new commit in its routing.
+
+To switch to automatic deploys, connect GitHub in Vercel (Account Settings, then Login Connections), import this repo as a project, and point the bigmammothmedia-website domain at it. Every push to `main` then goes live with no other steps.
+
+To preview locally, run any static server from the repo root, for example `npx serve .`
