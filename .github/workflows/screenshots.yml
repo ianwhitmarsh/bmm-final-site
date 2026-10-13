@@ -1,0 +1,28 @@
+name: Screenshot client websites
+# Refreshes the slideshow images in /showcase. Runs when the site list
+# changes, or by hand from the Actions tab.
+on:
+  push:
+    branches: [main]
+    paths: [".github/scripts/screenshots.json", ".github/scripts/screenshots.py", ".github/workflows/screenshots.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  shoot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install playwright pillow && python -m playwright install --with-deps chromium
+      - run: python .github/scripts/screenshots.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add showcase
+          git commit -m "Refresh client website screenshots" || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main
+          git push origin HEAD:gh-pages --force
