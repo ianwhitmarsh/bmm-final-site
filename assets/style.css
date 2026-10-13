@@ -352,5 +352,5 @@ body.at-footer .consult,body.at-footer .to-top{opacity:0!important;pointer-event
 .brand{gap:0}
 /* Lindsay's booking page: calendar gets the wider column */
 .lindsay-grid{grid-template-columns:1.35fr 1fr;align-items:start}
-.calendar-card{padding:10px;background:#fff;overflow:hidden}
+.calendar-card{padding:6px;overflow:hidden}
 @media (max-width:900px){.lindsay-grid{grid-template-columns:1fr}}
