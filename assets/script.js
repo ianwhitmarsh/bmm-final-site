@@ -118,13 +118,13 @@ var SHOWCASE = [
 ['Restoration Chiropractic','restoration-chiropractic-website-social','Website Design + Social Media Management','restorationowasso.com','/showcase/restoration-chiro.webp'],
 ['Owasso Association (ASBO)','asbo-website-development','Website Design + Development','owassoassociation.com','/showcase/asbo.webp'],
 ['Verve Fitness','verve-fitness-website','Website Design + Development','vervefitnessok.com','/showcase/verve.webp'],
-['Land + Legacy Custom Homes','land-and-legacy-website-social','Website Design + Social Media Management','landandlegacyok.com','/img/AecMo2i1f5n8YvYBJljE6Vxwlho.webp?width=1030&height=786'],
+['Land + Legacy Custom Homes','land-and-legacy-website-social','Website Design + Social Media Management','landandlegacyok.com','/showcase/land-and-legacy.webp'],
 ['Rhiannon Thoreson','rhiannon-thoreson-website-social','Website Design + Social Media Management','rhiannonthoreson.com','/showcase/rhiannon.webp'],
 ['Jacob & Associates Realty (JA Realtors)','jacob-associates-realty','Website Design + Development','','/img/axjat4wDwYhCThLePumKLE5pqg.webp?width=1080&height=1350'],
 ['Kuykendall Construction','kuykendall-construction','Website Design + Development','kuykendallconstructionok.com','/showcase/kuykendall.webp'],
 ['Luedke Lights & Lawn Care','luedke-lights-lawn-care-website-social','Website Design + Social Media Management','luedkelightsandlawn.com','/showcase/luedke.webp'],
 ['Long Tail Farm','long-tail-farm-website','Website Design + Development','ltfarm.com','/showcase/long-tail-farm.webp'],
-['A Touch Above Holistic Health','a-touch-above-holistic-health-website-design','Website Design + Development','atouchabovehhc.com','/img/YmxvHksav6nLoyOdLRS3jkkzYs.webp?width=1080&height=1350'],
+['A Touch Above Holistic Health','a-touch-above-holistic-health-website-design','Website Design + Development','atouchabovehhc.com','/showcase/a-touch-above.webp'],
 ['Luxury Finishes Construction','luxury-finishes-construction','Website Design + Development','luxuryfinishesllc.com/home','/showcase/luxury-finishes.webp'],
 ];
 SHOWCASE.sort(function(a,b){ return (b[3]?1:0)-(a[3]?1:0); });
