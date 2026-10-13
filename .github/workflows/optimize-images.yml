@@ -1,0 +1,26 @@
+name: Compress site images
+# Runs when this file or the script changes, or by hand from the Actions tab.
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/optimize-images.yml", ".github/scripts/optimize_images.py"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pillow
+      - run: python .github/scripts/optimize_images.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Compress images to WebP and serve them from /img" || exit 0
+          git push origin HEAD:main
+          git push origin HEAD:gh-pages --force
