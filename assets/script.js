@@ -1,4 +1,4 @@
-var LOGO_URL = "https://framerusercontent.com/images/RjYs2ZV5pWaFayY0D1kziPGAlM.png?scale-down-to=512&width=1080&height=1350";
+var LOGO_URL = "/img/RjYs2ZV5pWaFayY0D1kziPGAlM.webp?width=1080&height=1350";
 var SERVICE_LINKS = [
 ["Web Design", "/web-design"],
 ["Social Media Management", "/social-media-management"],
@@ -111,22 +111,22 @@ form.querySelectorAll('input, textarea').forEach(function (el) { el.disabled = t
 }
 });
 var SHOWCASE = [
-['Butler Homes','butler-homes','Web Development','','https://framerusercontent.com/images/rCbezGgtLGaIYKvr7iqhiDFvjg.png?width=3384&height=1620'],
-['Meadow Lake Ranch','meadow-lake-ranch','Website Design + Development','www.meadowlakeranch.com','https://framerusercontent.com/images/gazmRMREBLeeUzYs7vnxEAjW5sQ.png?width=1080&height=1350'],
+['Butler Homes','butler-homes','Web Development','','/img/rCbezGgtLGaIYKvr7iqhiDFvjg.webp?width=3384&height=1620'],
+['Meadow Lake Ranch','meadow-lake-ranch','Website Design + Development','www.meadowlakeranch.com','/img/gazmRMREBLeeUzYs7vnxEAjW5sQ.webp?width=1080&height=1350'],
 ['Pelvic Health Specialists','pelvic-health-specialists','Website Design + Development','pelvichealthspecialists.com','/showcase/pelvic-health.webp'],
 ['Master Kraft Tooling','master-kraft-tooling---website-development','Website Design','mktooling.com','/showcase/master-kraft.webp'],
 ['Restoration Chiropractic','restoration-chiropractic-website-social','Website Design + Social Media Management','restorationowasso.com','/showcase/restoration-chiro.webp'],
 ['Owasso Association (ASBO)','asbo-website-development','Website Design + Development','owassoassociation.com','/showcase/asbo.webp'],
 ['Verve Fitness','verve-fitness-website','Website Design + Development','vervefitnessok.com','/showcase/verve.webp'],
-['Land + Legacy Custom Homes','land-and-legacy-website-social','Website Design + Social Media Management','landandlegacyok.com','https://framerusercontent.com/images/AecMo2i1f5n8YvYBJljE6Vxwlho.png?width=1030&height=786'],
+['Land + Legacy Custom Homes','land-and-legacy-website-social','Website Design + Social Media Management','landandlegacyok.com','/img/AecMo2i1f5n8YvYBJljE6Vxwlho.webp?width=1030&height=786'],
 ['Rhiannon Thoreson','rhiannon-thoreson-website-social','Website Design + Social Media Management','rhiannonthoreson.com','/showcase/rhiannon.webp'],
-['Jacob & Associates Realty (JA Realtors)','jacob-associates-realty','Website Design + Development','','https://framerusercontent.com/images/axjat4wDwYhCThLePumKLE5pqg.png?width=1080&height=1350'],
-['918 Family Wellness','918-family-wellness','Website Design & Social Media Management','918familywellness.com','https://framerusercontent.com/images/ZxLQ9ifbw45XJmEl9SUV5o5X30.png?width=1030&height=786'],
+['Jacob & Associates Realty (JA Realtors)','jacob-associates-realty','Website Design + Development','','/img/axjat4wDwYhCThLePumKLE5pqg.webp?width=1080&height=1350'],
+['918 Family Wellness','918-family-wellness','Website Design & Social Media Management','918familywellness.com','/img/ZxLQ9ifbw45XJmEl9SUV5o5X30.webp?width=1030&height=786'],
 ['Kuykendall Construction','kuykendall-construction','Website Design + Development','kuykendallconstructionok.com','/showcase/kuykendall.webp'],
 ['Luedke Lights & Lawn Care','luedke-lights-lawn-care-website-social','Website Design + Social Media Management','luedkelightsandlawn.com','/showcase/luedke.webp'],
 ['Lee Signature Homes','lee-signature-homes-—-website-social','Website Design + Social Media Management','leesignaturehomesok.com','/showcase/lee-signature.webp'],
 ['Long Tail Farm','long-tail-farm-website','Website Design + Development','ltfarm.com','/showcase/long-tail-farm.webp'],
-['A Touch Above Holistic Health','a-touch-above-holistic-health-website-design','Website Design + Development','atouchabovehhc.com','https://framerusercontent.com/images/YmxvHksav6nLoyOdLRS3jkkzYs.png?width=1080&height=1350'],
+['A Touch Above Holistic Health','a-touch-above-holistic-health-website-design','Website Design + Development','atouchabovehhc.com','/img/YmxvHksav6nLoyOdLRS3jkkzYs.webp?width=1080&height=1350'],
 ['Luxury Finishes Construction','luxury-finishes-construction','Website Design + Development','luxuryfinishesllc.com/home','/showcase/luxury-finishes.webp'],
 ];
 SHOWCASE.sort(function(a,b){ return (b[3]?1:0)-(a[3]?1:0); });
@@ -155,12 +155,12 @@ return 'position:absolute;max-width:none;object-fit:fill;inset:auto;' +
 'left:' + (-cx / cw * 100).toFixed(3) + '%;top:' + (-cy / ch * 100).toFixed(3) + '%;';
 }
 var SOCIAL_WORK = [
-['Gravity Bear','gravity-bear','Advertisements — Meta Ads','','https://framerusercontent.com/images/dvBaBD8aXWIn8Y5eDQMhjJhiQ7g.png?width=2304&height=1728'],
-['Inject Tulsa','inject-tulsa','Social Media Management','www.instagram.com/injectaesthetics','https://framerusercontent.com/images/MPYS4EUU8qjWPVBnqJ63hni2fcU.png?width=2304&height=1728'],
-['BeLocal','be-local-social-media','Social Media Management','www.instagram.com/belocaltulsa','https://framerusercontent.com/images/zpDoMFKmubZiD7tMp0AWxEQ.png?width=1030&height=786'],
-['Red Brick Pizza','red-brick-portfolio','Social Media Management','www.facebook.com/RedBrickPizzaOK','https://framerusercontent.com/images/QLhZe4qzD0NTlbncMLrDplrE0.png?width=2304&height=1728'],
-['FireHouse Roofing','firehouse-roofing-social-media','Social Media Management','www.instagram.com/firehouseroofingco','https://framerusercontent.com/images/ArcPbI3wZy7bcLsm2EahTqxg4uQ.png?width=1030&height=786'],
-['Madsen Massage','madsen-massage-portfolio','Social Media Management','www.instagram.com/madsenmassagellc/?hl=en','https://framerusercontent.com/images/KNsxFPrNtub8c71i404gI1tB8g8.png?width=1030&height=786'],
+['Gravity Bear','gravity-bear','Advertisements — Meta Ads','','/img/dvBaBD8aXWIn8Y5eDQMhjJhiQ7g.webp?width=2304&height=1728'],
+['Inject Tulsa','inject-tulsa','Social Media Management','www.instagram.com/injectaesthetics','/img/MPYS4EUU8qjWPVBnqJ63hni2fcU.webp?width=2304&height=1728'],
+['BeLocal','be-local-social-media','Social Media Management','www.instagram.com/belocaltulsa','/img/zpDoMFKmubZiD7tMp0AWxEQ.webp?width=1030&height=786'],
+['Red Brick Pizza','red-brick-portfolio','Social Media Management','www.facebook.com/RedBrickPizzaOK','/img/QLhZe4qzD0NTlbncMLrDplrE0.webp?width=2304&height=1728'],
+['FireHouse Roofing','firehouse-roofing-social-media','Social Media Management','www.instagram.com/firehouseroofingco','/img/ArcPbI3wZy7bcLsm2EahTqxg4uQ.webp?width=1030&height=786'],
+['Madsen Massage','madsen-massage-portfolio','Social Media Management','www.instagram.com/madsenmassagellc/?hl=en','/img/KNsxFPrNtub8c71i404gI1tB8g8.webp?width=1030&height=786'],
 ];
 var TESTIMONIALS = [
 ["In over 30 years of business, Ian and Big Mammoth Media has been one of the best investments we've made. For over two years, their innovative, results-driven strategies delivered exceptional ROI and directly boosted our growth.", "Joel Wiland", "Owner — J. David Jewelry"],
