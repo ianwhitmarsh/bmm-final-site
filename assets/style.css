@@ -338,3 +338,15 @@ body.at-footer .consult,body.at-footer .to-top{opacity:0!important;pointer-event
 }
 .contact-method>div{min-width:0}
 .contact-method a,.contact-method strong{overflow-wrap:anywhere}
+
+/* ===== Oct 13 review fixes ===== */
+/* service tabs sit flush left with the heading above them */
+.tabs{justify-content:flex-start}
+/* buttons inside article text keep their own colours instead of the blue link style */
+.article-body a.btn{text-decoration:none}
+.article-body a.btn-accent,.article-body a.btn-primary{color:#fff}
+.article-body .cta-band a.btn-accent{color:#00020f}
+.article-body .cta-band a.btn-accent:hover{color:#fff}
+.article-body a.btn-outline{color:#fff}
+/* header: logo only */
+.brand{gap:0}

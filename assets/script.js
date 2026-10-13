@@ -24,7 +24,7 @@ return html;
 function renderHeader(active) {
 return '' +
 '<div class="container nav-row">' +
-'<a class="brand" href="/"><img src="' + LOGO_URL + '" alt="Big Mammoth Media logo">Big Mammoth Media</a>' +
+'<a class="brand" href="/" aria-label="Big Mammoth Media home"><img src="' + LOGO_URL + '" alt="Big Mammoth Media"></a>' +
 '<nav class="nav-links">' + renderNavLinks(active) + '</nav>' +
 '<div class="nav-cta">' +
 '<a href="/contact" class="btn btn-accent btn-sm btn-sm-desktop">Get Started</a>' +
@@ -124,7 +124,7 @@ var SHOWCASE = [
 ['918 Family Wellness','918-family-wellness','Website Design & Social Media Management','918familywellness.com','/img/ZxLQ9ifbw45XJmEl9SUV5o5X30.webp?width=1030&height=786'],
 ['Kuykendall Construction','kuykendall-construction','Website Design + Development','kuykendallconstructionok.com','/showcase/kuykendall.webp'],
 ['Luedke Lights & Lawn Care','luedke-lights-lawn-care-website-social','Website Design + Social Media Management','luedkelightsandlawn.com','/showcase/luedke.webp'],
-['Lee Signature Homes','lee-signature-homes-—-website-social','Website Design + Social Media Management','leesignaturehomesok.com','/showcase/lee-signature.webp'],
+['Lee Signature Homes','lee-signature-homes-website-social','Website Design + Social Media Management','leesignaturehomesok.com','/showcase/lee-signature.webp'],
 ['Long Tail Farm','long-tail-farm-website','Website Design + Development','ltfarm.com','/showcase/long-tail-farm.webp'],
 ['A Touch Above Holistic Health','a-touch-above-holistic-health-website-design','Website Design + Development','atouchabovehhc.com','/img/YmxvHksav6nLoyOdLRS3jkkzYs.webp?width=1080&height=1350'],
 ['Luxury Finishes Construction','luxury-finishes-construction','Website Design + Development','luxuryfinishesllc.com/home','/showcase/luxury-finishes.webp'],

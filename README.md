@@ -6,21 +6,31 @@ The Big Mammoth Media marketing site (bigmammothmedia-website.vercel.app): plain
 
 | Path | What it is |
 |---|---|
-| `index.html` | Home page |
-| `about.html`, `web-design.html`, `social-media-management.html`, `podcasting.html`, `content-sessions.html`, `works.html`, `contact.html` | Main pages |
-| `assets/style.css` | All site styles, including the mobile layout (`Mobile pass` block at the end) |
+| `*.html` | Main pages: home (`index.html`), about, web design, social media management, podcasting, content sessions, works, contact, blogs, careers, privacy policy, Tulsa social media landing page |
+| `works/` | The 23 project case studies |
+| `blogs/` | The blog posts |
+| `careers/` | Job listings |
+| `assets/style.css` | All site styles, including the mobile layout |
 | `assets/script.js` | Shared header and footer, home page website slideshow, FAQ accordions, scroll effects |
-| `showcase/*.webp` | Screenshots used in the home page website slideshow |
-| `vercel.json` | Clean URLs plus routes for the pages still served from their original Vercel projects |
+| `img/` | Every photo and screenshot, compressed to WebP. `img/t/` holds small versions for cards and lists, `img/blog/` holds blog cover images |
+| `showcase/` | Screenshots used in the home page website slideshow |
 
-## Pages served from other Vercel projects
+## How it goes live
 
-The 23 project case studies (`/works/...`), the 22 blog posts (`/blogs/...`), `/blogs`, `/careers`, `/careers/facebook-(meta)-ads-manager`, `/privacy-policy` and `/tulsa-social-media-landing` are not in this repo. `vercel.json` forwards those URLs to the `bmm-works-*`, `bmm-blogs-*` and `bmm-main-*` projects on Vercel. Those pages still load `/assets/style.css` and `/assets/script.js` from this site, so they share the same header, footer and styling.
+Pushing to `main` publishes the site. The **Publish to GitHub Pages** workflow copies `main` to the `gh-pages` branch, GitHub Pages serves it at ianwhitmarsh.github.io/bmm-final-site, and the `bigmammothmedia-website` project on Vercel forwards bigmammothmedia-website.vercel.app to it. Changes are live within a minute or two.
 
-## Deploying
+Keep the repo public: GitHub Pages on a free account only serves public repos.
 
-The live site is the `bigmammothmedia-website` project on Vercel. Right now the Vercel team is not linked to GitHub, so pushes here do not redeploy automatically. The live site serves `assets/` and `showcase/` from this repo through jsDelivr (`cdn.jsdelivr.net/gh/ianwhitmarsh/bmm-final-site@<commit>/...`), pinned to a specific commit. A change to a CSS, JS or image file goes live when that Vercel project is redeployed with the new commit in its routing.
+## Adding a blog post
 
-To switch to automatic deploys, connect GitHub in Vercel (Account Settings, then Login Connections), import this repo as a project, and point the bigmammothmedia-website domain at it. Every push to `main` then goes live with no other steps.
+1. Copy any file in `blogs/` and change the title, description, date, cover image and article text.
+2. Add a card for it at the top of the grid in `blogs.html` (copy an existing `blog-card-wrap`).
+3. Optionally swap it into the three cards in the Insights section of `index.html`.
 
-To preview locally, run any static server from the repo root, for example `npx serve .`
+## Images
+
+New images go in `img/` as WebP. Keep photos under about 1600px wide; anything shown in a card should also get a 640px copy in `img/t/`. The **Compress site images** workflow (Actions tab, Run workflow) converts any images still linked from Framer.
+
+## Local preview
+
+Run any static server from the repo root, for example `npx serve .`
