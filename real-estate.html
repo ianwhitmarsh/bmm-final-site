@@ -173,6 +173,8 @@ main [hidden]{display:none!important}
 .slot.sel{background:var(--accent-lit);border-color:var(--accent-lit);color:#fff}
 .slot small{display:block;font-weight:500;font-size:12px;opacity:.75}
 .slots .empty{font-size:14px;color:var(--muted)}
+.ghl-card{padding:6px;overflow:hidden}
+.ghl-card iframe{display:block;width:100%;min-height:760px;border:0;background:transparent}
 .step-nav{display:flex;justify-content:space-between;gap:12px;margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
 .step-nav .btn[disabled]{opacity:.4;pointer-events:none}
 .err{color:#ff8a8a;font-size:13.5px;margin-top:12px;min-height:1em}
@@ -387,7 +389,7 @@ main [hidden]{display:none!important}
 
 <section class="section section--cream" id="work">
   <div class="container">
-    <div class="section-head center"><div class="eyebrow">The work</div><h2>See what you get</h2><p>Every Full Service shoot includes all five. Tap through to see each one.</p></div>
+    <div class="section-head center"><div class="eyebrow">The work</div><h2>See what you get</h2><p>Every Full Service shoot includes all of it. Tap through to see each one.</p></div>
     <div class="tabs-row"><div class="seg" role="group" aria-label="Showcase" id="showTabs">
       <button type="button" data-show="photos" aria-pressed="true">Photos</button>
       <button type="button" data-show="video" aria-pressed="false">Video</button>
@@ -438,7 +440,7 @@ main [hidden]{display:none!important}
     <div class="book">
       <div class="book-main">
         <div class="book-note">Preview: payments and the calendar aren't connected yet. Nothing here is charged or booked.</div>
-        <ol class="stepper" id="stepper"><li>The home</li><li>Package</li><li>Date &amp; time</li><li>Checkout</li></ol>
+        <ol class="stepper" id="stepper"><li>The home</li><li>Package</li><li>Your details</li><li>Date &amp; time</li></ol>
 
         <form id="bookForm" novalidate>
           <div class="step-panel on" data-step="0">
@@ -486,28 +488,29 @@ main [hidden]{display:none!important}
           </div>
 
           <div class="step-panel" data-step="2">
-            <h3 id="calTitle">Pick a shoot time</h3>
-            <p id="calSub"></p>
-            <div class="cal">
-              <div>
-                <div class="cal-head"><button type="button" id="calPrev" aria-label="Previous month">‹</button><strong id="calMonth"></strong><button type="button" id="calNext" aria-label="Next month">›</button></div>
-                <div class="cal-grid" id="calGrid"></div>
-                <div class="cal-legend" id="calLegend" hidden><i></i> Your list date</div>
-              </div>
-              <div class="slots"><h4 id="slotDay">Choose a day</h4><div class="slot-list" id="slotList"><p class="empty">Open days are highlighted.</p></div></div>
-            </div>
-            <div class="err" id="err2"></div>
-          </div>
-
-          <div class="step-panel" data-step="3">
             <h3>Your details</h3>
-            <p>We'll text you your Big Mammoth link and email a calendar invite and receipt.</p>
+            <p>We'll use these to confirm your shoot and send your Big Mammoth link.</p>
             <div class="form-2">
               <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name"></div>
               <div class="field"><label for="brokerage">Brokerage</label><input id="brokerage" name="brokerage" autocomplete="organization"></div>
               <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
               <div class="field"><label for="phone">Mobile phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
               <div class="field full" id="igField"><label for="ig">Instagram handle</label><input id="ig" name="ig" placeholder="@yourname"></div>
+            </div>
+            <div class="err" id="err2"></div>
+          </div>
+
+          <div class="step-panel" data-step="3">
+            <h3 id="calTitle">Pick a shoot time</h3>
+            <p id="calSub"></p>
+            <div class="ghl-wrap" id="ghlCal" hidden><div class="form-card calendar-card ghl-card"><iframe id="ghlFrame" title="Pick a time for your shoot" scrolling="no"></iframe></div></div>
+            <div class="cal" id="mockCal">
+              <div>
+                <div class="cal-head"><button type="button" id="calPrev" aria-label="Previous month">‹</button><strong id="calMonth"></strong><button type="button" id="calNext" aria-label="Next month">›</button></div>
+                <div class="cal-grid" id="calGrid"></div>
+                <div class="cal-legend" id="calLegend" hidden><i></i> Your list date</div>
+              </div>
+              <div class="slots"><h4 id="slotDay">Choose a day</h4><div class="slot-list" id="slotList"><p class="empty">Open days are highlighted.</p></div></div>
             </div>
             <div class="err" id="err3"></div>
           </div>
@@ -622,6 +625,15 @@ main [hidden]{display:none!important}
     { k: 'ctv', name: 'Add TV', note: 'A new 30-second spot every quarter, on streaming TV in your area', price: 250, monthly: true, when: function (c) { return c === 'mammoth'; } }
   ];
   var SLOT_TIMES = ['9:00 AM', '11:30 AM', '2:00 PM'];
+
+  // GoHighLevel booking calendar. Paste the calendar's booking link, e.g.
+  // https://links.nextleadpro.com/widget/booking/XXXXXXXXXXXXXXXX
+  // When it's set, the "Date & time" step shows real availability and bookings land on that calendar,
+  // prefilled with the agent's details. `kickoffUrl` is an optional separate calendar for Mammoth kickoff calls.
+  // `detailsField` is the key of a GHL custom field that receives the package, address and price (optional).
+  // While `calendarUrl` is empty, the demo calendar is shown instead.
+  var BOOKING = { calendarUrl: '', kickoffUrl: '', detailsField: 'booking_details' };
+  function ghlOn() { return !!BOOKING.calendarUrl; }
 
   function $(id) { return document.getElementById(id); }
   function money(n) { return '$' + n.toLocaleString('en-US'); }
@@ -757,9 +769,10 @@ main [hidden]{display:none!important}
     $('sumTotal').textContent = money(q.total);
     $('sumGet').innerHTML = q.get;
     $('sumWhen').innerHTML = state.day && state.time ? (isKickoff() ? 'Kickoff call: ' : 'Shoot: ') + '<strong>' + fmtDate(state.day) + ', ' + state.time + '</strong>' : '';
+    $('sumLabel').textContent = ghlOn() ? (q.monthly ? 'First month' : 'Total') : 'Due today';
     $('sumFine').textContent = q.monthly
-      ? '3-month minimum, then month to month. Billed monthly from today.'
-      : 'Free rescheduling up to 24 hours before.';
+      ? '3-month minimum, then month to month.' + (ghlOn() ? ' We\u2019ll send your first invoice after your kickoff.' : ' Billed monthly from today.')
+      : (ghlOn() ? 'No payment to book. We\u2019ll confirm your shoot and send an invoice. ' : '') + 'Free rescheduling up to 24 hours before.';
     renderMbar();
   }
 
@@ -814,16 +827,23 @@ main [hidden]{display:none!important}
     steps.forEach(function (s, i) { s.classList.toggle('on', i === n); s.classList.toggle('done', i < n); });
     backBtn.disabled = n === 0;
     if (n === 1) { seedMammoth(); renderPackage(); }
-    if (n === 2) {
+    if (n === 2) $('igField').hidden = !(cat() === 'kit' || cat() === 'mammoth');
+    if (n === 3) {
       $('calTitle').textContent = isKickoff() ? 'Pick a kickoff call time' : 'Pick a shoot time';
       var needsAgent = cat() === 'kit' || cat() === 'mammoth';
       $('calSub').textContent = isKickoff() ? 'A 30-minute call to plan your first month of content.'
         : 'Shoots take about 2 hours, and twilight photos are taken at sunset.' + (needsAgent ? ' Be there for the first 20 minutes to film your intro video.' : '') + (listDate() ? ' Days before your list date are best.' : '');
       var ld = listDate();
       if (ld) state.month = Math.max(0, Math.min(1, (ld.getFullYear() - today.getFullYear()) * 12 + ld.getMonth() - today.getMonth()));
-      renderCal();
+      if (ghlOn()) {
+        $('calSub').textContent = isKickoff() ? 'Live availability. Pick a time and confirm, and you\u2019ll get a confirmation by email.'
+          : 'Live availability from our calendar. Pick a time and confirm, and you\u2019ll get a confirmation by email.' + (listDate() ? ' Days before your list date are best.' : '');
+        renderGhl();
+      } else renderCal();
     }
-    if (n === 3) $('igField').hidden = !(cat() === 'kit' || cat() === 'mammoth');
+    $('mockCal').hidden = ghlOn();
+    $('ghlCal').hidden = !(ghlOn() && n === 3);
+    nextBtn.hidden = ghlOn() && n === 3;
     nextBtn.textContent = n < 3 ? 'Continue' : 'Pay ' + money(quote().total) + ' & Book';
     renderSummary();
   }
@@ -835,8 +855,8 @@ main [hidden]{display:none!important}
       else if (!form.sqft.value.trim()) err = 'Add the square footage so we can price your shoot.';
       else if (!state.sqft) err = 'That square footage doesn\u2019t look right. Enter a number, like 1,850.';
     }
-    if (n === 2 && !(state.day && state.time)) err = 'Pick a day and a time.';
-    if (n === 3) {
+    if (n === 3 && !ghlOn() && !(state.day && state.time)) err = 'Pick a day and a time.';
+    if (n === 2) {
       if (!form.name.value.trim()) err = 'Add your name.';
       else if (!form.email.value || !form.email.checkValidity()) err = 'Add a valid email for your invite and receipt.';
       else if (!form.phone.value.trim()) err = "Add your mobile number. That's where we text your Big Mammoth link.";
@@ -885,11 +905,11 @@ main [hidden]{display:none!important}
   $('calGrid').addEventListener('click', function (e) {
     var b = e.target.closest('.day.open'); if (!b) return;
     state.day = new Date(Number(b.dataset.ts)); state.time = null;
-    renderCal(); renderSummary(); $('err2').textContent = '';
+    renderCal(); renderSummary(); $('err3').textContent = '';
   });
   $('slotList').addEventListener('click', function (e) {
     var b = e.target.closest('.slot'); if (!b) return;
-    state.time = b.dataset.t; renderSlots(); renderSummary(); $('err2').textContent = '';
+    state.time = b.dataset.t; renderSlots(); renderSummary(); $('err3').textContent = '';
   });
   $('calPrev').addEventListener('click', function () { state.month = 0; renderCal(); });
   $('calNext').addEventListener('click', function () { state.month = 1; renderCal(); });
@@ -994,6 +1014,8 @@ main [hidden]{display:none!important}
     $('showPanel').innerHTML = SHOW[k].html();
     $('showCap').innerHTML = SHOW[k].cap;
   }
+  // No placeholder for the 3D tour: its tab only appears once a tour link is set in real-estate-media.js.
+  if (!(MEDIA.tour && MEDIA.tour.url)) { var tourTab = document.querySelector('#showTabs [data-show="tour"]'); if (tourTab) tourTab.remove(); }
   document.querySelectorAll('#showTabs button').forEach(function (b) { b.addEventListener('click', function () { renderShow(b.dataset.show); }); });
 
   function renderBeforeAfter() {
@@ -1048,6 +1070,36 @@ main [hidden]{display:none!important}
     else hero.style.backgroundImage = 'url("' + h.image.replace(/"/g, '%22') + '")';
   })();
 
+  /* ---------- GoHighLevel calendar ---------- */
+  // Everything the agent chose, as one line for the GHL contact record.
+  function bookingSummary() {
+    var q = quote(), bits = [q.rows.map(function (r) { return r[0] + ' ' + r[1]; }).join(', '), 'Total ' + money(q.total) + (q.monthly ? ' first month' : '')];
+    if (!noListing()) bits.push(form.addr.value.trim(), state.sqft ? state.sqft.toLocaleString('en-US') + ' sq ft' : '');
+    if (form.golive.value) bits.push('List date ' + form.golive.value);
+    if (form.brokerage.value.trim()) bits.push(form.brokerage.value.trim());
+    if (form.ig.value.trim()) bits.push('IG ' + form.ig.value.trim());
+    return bits.filter(Boolean).join(' | ');
+  }
+  function renderGhl() {
+    var base = (isKickoff() && BOOKING.kickoffUrl) || BOOKING.calendarUrl;
+    var u = new URL(base), names = form.name.value.trim().split(/\s+/);
+    u.searchParams.set('first_name', names.shift() || '');
+    if (names.length) u.searchParams.set('last_name', names.join(' '));
+    u.searchParams.set('email', form.email.value.trim());
+    u.searchParams.set('phone', form.phone.value.trim());
+    if (BOOKING.detailsField) u.searchParams.set(BOOKING.detailsField, bookingSummary());
+    var f = $('ghlFrame');
+    f.id = u.pathname.split('/').pop() + '_realestate';
+    if (f.src !== u.toString()) f.src = u.toString();
+    // GHL's embed script resizes the calendar to fit; load it once.
+    if (!document.querySelector('script[data-ghl-embed]')) {
+      var s = document.createElement('script');
+      s.src = u.origin + '/js/form_embed.js';
+      s.dataset.ghlEmbed = '1';
+      document.body.appendChild(s);
+    }
+  }
+
   /* ---------- Sticky booking bar (phones) ---------- */
   var mbar = $('mbar'), seen = { book: false, hero: true };
   function renderMbar() {
@@ -1061,10 +1113,10 @@ main [hidden]{display:none!important}
     var lbl = $('mbarLbl'), amt = $('mbarAmt'), btn = $('mbarBtn');
     if (seen.book && !done) {
       var priced = cat() === 'mammoth' || state.tier;
-      lbl.textContent = priced ? (cat() === 'mammoth' ? 'First month' : 'Due today') : 'Your price';
+      lbl.textContent = priced ? (cat() === 'mammoth' ? 'First month' : (ghlOn() ? 'Total' : 'Due today')) : 'Your price';
       amt.textContent = priced ? money(quote().total) : 'Add sq ft';
-      btn.textContent = state.step < 3 ? 'Continue' : 'Pay & Book';
-      btn.dataset.mode = 'next';
+      btn.textContent = state.step < 3 ? 'Continue' : (ghlOn() ? 'Pick a time' : 'Pay & Book');
+      btn.dataset.mode = ghlOn() && state.step === 3 ? 'cal' : 'next';
     } else {
       lbl.textContent = 'Listings from';
       amt.textContent = money(PKG.photo.price.q);
@@ -1077,8 +1129,9 @@ main [hidden]{display:none!important}
   window.addEventListener('scroll', checkMbar, { passive: true });
   window.addEventListener('resize', checkMbar);
   $('mbarBtn').addEventListener('click', function () {
-    if (this.dataset.mode === 'next') nextBtn.click();
-    document.querySelector(this.dataset.mode === 'next' ? '.book-main' : '#book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    var mode = this.dataset.mode;
+    if (mode === 'next') nextBtn.click();
+    document.querySelector(mode === 'next' ? '.book-main' : mode === 'cal' ? '#ghlCal' : '#book').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
   renderShow('photos');

@@ -85,6 +85,7 @@ section{padding:40px 0}
 .media2{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:16px}
 .media2 .ph-box{aspect-ratio:9/16}
 .media2 .ph-box.tour{aspect-ratio:auto;min-height:320px}
+.media2.solo{grid-template-columns:minmax(0,320px)}
 .ph-box video{object-fit:cover;background:#000}
 .meet{display:grid;grid-template-columns:260px minmax(0,1fr);gap:28px;align-items:center}
 .meet .ph-box{aspect-ratio:9/16}
@@ -168,7 +169,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div></section>
 
   <section><div class="wrap">
-    <div class="sec-h"><h2>Video &amp; 3D tour</h2></div>
+    <div class="sec-h"><h2 id="mediaTitle">Video</h2></div>
     <div class="media2" id="media2"></div>
   </div></section>
 
@@ -221,7 +222,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   var tour = M.tour || {};
   var vids = M.videos || [];
   document.getElementById('media2').innerHTML = box(vids[0] || { label: 'Listing Reel' }, 'video') +
-    (tour.url ? '<div class="ph-box tour"><iframe src="' + esc(tour.url) + '" title="3D tour" allow="xr-spatial-tracking; fullscreen" allowfullscreen loading="lazy"></iframe></div>' : box({ label: '3D tour' }, '', 'tour'));
+    (tour.url ? '<div class="ph-box tour"><iframe src="' + esc(tour.url) + '" title="3D tour" allow="xr-spatial-tracking; fullscreen" allowfullscreen loading="lazy"></iframe></div>' : '');
+  // The 3D tour box only appears once a tour link is set.
+  if (tour.url) document.getElementById('mediaTitle').innerHTML = 'Video &amp; 3D tour';
+  else document.getElementById('media2').classList.add('solo');
   document.getElementById('introSlot').innerHTML = box(vids[2] || { label: 'Agent intro video' }, 'video');
 
   document.querySelectorAll('.swatches button').forEach(function (b) {
