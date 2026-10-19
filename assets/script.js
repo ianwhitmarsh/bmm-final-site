@@ -3,9 +3,10 @@ var SERVICE_LINKS = [
 ["Web Design", "/web-design"],
 ["Social Media Management", "/social-media-management"],
 ["Podcasting", "/podcasting"],
-["Content Sessions", "/content-sessions"]
+["Content Sessions", "/content-sessions"],
+["Real Estate", "/real-estate"]
 ];
-var NAV_ITEMS = [["Home", "/"], ["About", "/about"], ["__services__", null], ["Works", "/works"], ["Blogs", "/blogs"], ["Careers", "/careers"]];
+var NAV_ITEMS = [["Home", "/"], ["About", "/about"], ["__services__", null], ["Real Estate", "/real-estate"], ["Works", "/works"], ["Blogs", "/blogs"], ["Careers", "/careers"]];
 function renderNavLinks(active) {
 var html = "";
 NAV_ITEMS.forEach(function (item) {
@@ -44,7 +45,7 @@ return '' +
 '<li><a href="/about">About</a></li><li><a href="/works">Works</a></li><li><a href="/blogs">Blogs</a></li><li><a href="/careers">Careers</a></li><li><a href="/privacy-policy">Privacy Policy</a></li>' +
 '</ul></div>' +
 '<div><h4>Services</h4><ul>' +
-'<li><a href="/web-design">Web Design</a></li><li><a href="/social-media-management">Social Media Management</a></li><li><a href="/podcasting">Podcasting</a></li><li><a href="/content-sessions">Content Sessions</a></li>' +
+'<li><a href="/web-design">Web Design</a></li><li><a href="/social-media-management">Social Media Management</a></li><li><a href="/podcasting">Podcasting</a></li><li><a href="/content-sessions">Content Sessions</a></li><li><a href="/real-estate">Real Estate</a></li>' +
 '</ul></div>' +
 '<div><h4>Get In Touch</h4><ul>' +
 '<li><a href="tel:+19182059830">(918) 205-9830</a></li><li><a href="mailto:info@bigmammothmedia.com">info@bigmammothmedia.com</a></li><li>Mon&ndash;Fri: 8 AM&ndash;5 PM</li><li>Walk-in: Tue &amp; Thu, 9 AM&ndash;2 PM</li>' +

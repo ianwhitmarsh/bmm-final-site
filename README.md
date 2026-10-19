@@ -14,6 +14,10 @@ The Big Mammoth Media marketing site (bigmammothmedia-website.vercel.app): plain
 | `assets/script.js` | Shared header and footer, home page website slideshow, FAQ accordions, scroll effects |
 | `img/` | Every photo and screenshot, compressed to WebP. `img/t/` holds small versions for cards and lists, `img/blog/` holds blog cover images |
 | `showcase/` | Screenshots used in the home page website slideshow |
+| `real-estate.html` | Real estate page: showcase, pricing, booking form (not connected to payments or a calendar yet) |
+| `listing-sample.html` | Sample of the branded listing link included with Content Kits (hidden from search engines) |
+| `assets/real-estate-media.js` | Every photo, video and graphic on the two real estate pages. Change a `src` here to swap media |
+| `img/real-estate/` | Real estate photos (WebP) and vertical videos (`video/`, 540x960 MP4) |
 
 ## How it goes live
 

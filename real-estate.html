@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tulsa Real Estate Photography, Video &amp; Social | Big Mammoth Media</title>
+<meta name="description" content="Listing photos, video, drone, 3D tours and twilight for Tulsa realtors, plus content kits that turn every listing into posts for your feed. Book online.">
+<link rel="canonical" href="https://bigmammothmedia.com/real-estate">
+<meta property="og:title" content="Tulsa Real Estate Photography, Video &amp; Social | Big Mammoth Media">
+<meta property="og:description" content="Sell the home. Sell you too. Listing media and social content for Tulsa realtors.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://framerusercontent.com/images/RjYs2ZV5pWaFayY0D1kziPGAlM.png?width=1080&height=1350">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Inter+Tight:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=20261013c">
+<style>
+/* Real estate page. Move into style.css once approved. */
+main [hidden]{display:none!important}
+.nowrap{white-space:nowrap}
+.re-photo{position:relative;overflow:hidden;background:linear-gradient(180deg,#f7b267 0%,#f4845f 38%,#5b3a6b 72%,#1d1a3a 100%)}
+.re-photo svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:58%}
+.re-photo.daylight{background:linear-gradient(180deg,#9cc9ff 0%,#cfe5ff 55%,#e8f1ff 100%)}
+.re-photo.daylight svg .house{fill:#2a3352}.re-photo.daylight svg .win{fill:#ffe9a8}.re-photo.daylight svg .ground{fill:#5f8f5a}
+.re-photo.inside{background:linear-gradient(160deg,#e9e1d4 0%,#cfc2ad 60%,#a8977c 100%)}
+
+/* Hero phones */
+.re-phones{position:relative;height:520px}
+.phone{position:absolute;width:236px;aspect-ratio:9/19;border-radius:34px;background:#05071a;border:1px solid var(--line-2);padding:10px;box-shadow:var(--shadow),var(--glow)}
+.phone .screen{position:relative;height:100%;border-radius:26px;overflow:hidden;background:var(--surface)}
+.phone .re-photo{position:absolute;inset:0}
+.phone .screen::after{content:"";position:absolute;inset:50% 0 0;background:linear-gradient(180deg,rgba(0,2,15,0) 0%,rgba(0,2,15,.82) 75%);pointer-events:none}
+.phone .tag{position:absolute;left:14px;top:16px;z-index:2;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--accent-lit);padding:5px 10px;border-radius:999px}
+.phone .cap{position:absolute;left:14px;right:14px;bottom:18px;color:#fff;z-index:2}
+.phone .cap strong{display:block;font-family:var(--font-display);font-size:20px;line-height:1.1;letter-spacing:-.02em}
+.phone .cap span{font-size:12px;opacity:.85}
+.phone .play{position:absolute;top:50%;left:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:rgba(255,255,255,.22);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center}
+.phone .play::after{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.phone.p1{left:4%;top:40px;transform:rotate(-6deg)}
+.phone.p2{left:34%;top:0;z-index:2}
+.phone.p3{right:2%;top:56px;transform:rotate(6deg)}
+
+/* Three ways to work with us */
+.paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1080px;margin:0 auto}
+.path{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:border-color .18s ease}
+.path:hover{border-color:var(--accent-mid)}
+.path .num{font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--accent-hover);letter-spacing:.1em}
+.path h3{font-size:24px;margin:10px 0 6px}
+.path p{font-size:15px;margin-bottom:16px}
+.path .from{margin-top:auto;font-family:var(--font-display);color:var(--white);font-size:22px;letter-spacing:-.02em}
+.path .from small{font-size:14px;color:var(--muted);letter-spacing:0}
+.path .btn{margin-top:16px;align-self:flex-start}
+
+/* Pricing */
+.tabs-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.subtabs{display:flex;justify-content:center;margin-bottom:28px}
+.seg{display:inline-flex;gap:4px;background:var(--surface);border:1px solid var(--line-2);border-radius:999px;padding:4px}
+.seg button{border:0;background:none;color:var(--body);font-family:var(--font-body);font-size:14px;font-weight:600;padding:9px 18px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent-lit);color:#fff}
+.tier-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1080px;margin:0 auto;align-items:stretch}
+/* The shared stylesheet caps .price-card at 520px with auto margins, which shrinks cards inside a grid. */
+.tier-grid > .price-card,.mam-grid > .price-card{max-width:none;margin:0;width:auto}
+.tier-grid .price-card{padding:30px 28px 28px}
+.tier-grid .price-card .btn,.mam-grid .price-card .btn{align-self:stretch;justify-content:center;margin-top:auto}
+.tier-grid .price-card ul{margin-bottom:26px}
+.tier-grid .price-card h3{font-size:22px;margin-bottom:2px}
+.tier-grid .range{font-size:14px;color:var(--muted);margin:0}
+.tier-grid .price{margin:14px 0 16px}
+.tier-grid .posts{display:inline-block;font-size:12.5px;font-weight:700;color:var(--accent-pale);background:var(--accent-soft);border:1px solid rgba(0,59,255,.35);border-radius:999px;padding:4px 10px;margin:-6px 0 14px}
+.price-note{font-size:14px;color:var(--muted);text-align:center;margin:30px auto 0;max-width:640px}
+.mam-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;max-width:1080px;margin:0 auto;align-items:stretch}
+.mam-grid .price small,.tier-grid .price small{font-size:16px;color:var(--muted);letter-spacing:0}
+.ctv-card{background:linear-gradient(160deg,var(--surface-2),var(--surface));border:1px dashed var(--accent-mid);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column}
+.ctv-card h3{font-size:22px}
+.tv{aspect-ratio:16/9;border-radius:12px;border:6px solid #05071a;box-shadow:0 0 0 1px var(--line-2);margin:4px 0 18px;position:relative;overflow:hidden}
+.tv .re-photo{position:absolute;inset:0}
+.tv .qr{position:absolute;right:10px;bottom:10px;width:44px;height:44px;border-radius:6px;background:
+  conic-gradient(#000 25%,#fff 0 50%,#000 0 75%,#fff 0) 0 0/11px 11px;border:4px solid #fff}
+.tv .tvcap{position:absolute;left:12px;bottom:12px;color:#fff;font-family:var(--font-display);font-weight:700;font-size:15px;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+
+/* Content kit posts */
+.kit{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:14px}
+.kit-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.kit-item .re-photo{aspect-ratio:4/5}
+.kit-item .lbl{position:absolute;left:10px;top:10px;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(0,2,15,.55);padding:4px 8px;border-radius:999px}
+.kit-item .mid{position:absolute;inset:0 0 38% 0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;color:#fff;font-size:17px;text-align:center;letter-spacing:-.01em;text-shadow:0 2px 14px rgba(0,0,0,.4);padding:10px}
+.kit-item .body{padding:14px 14px 16px}
+.kit-item h3{font-size:15px;margin:0 0 4px}
+.kit-item p{font-size:13px;margin:0;color:var(--muted);line-height:1.45}
+.kit-item.elite{border-style:dashed;border-color:var(--accent-mid)}
+.kit-item .elite-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-hover);margin-bottom:4px}
+.kit-sum{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px;font-family:var(--font-display);font-size:19px;color:var(--ink);text-align:center}
+.kit-sum b{font-size:36px;color:var(--accent-hover);letter-spacing:-.03em}
+.kit-sum .sep{color:var(--dim);margin:0 10px}
+
+/* Booking */
+.book{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:28px;align-items:start}
+.book-main{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+.book-note{font-size:12.5px;color:var(--muted);background:var(--bg-alt);border:1px dashed var(--line-2);border-radius:10px;padding:8px 12px;margin-bottom:22px}
+.stepper{display:flex;gap:8px;margin:0 0 28px;padding:0;list-style:none;counter-reset:s}
+.stepper li{flex:1;counter-increment:s;font-size:13px;font-weight:600;color:var(--dim);padding-top:12px;border-top:3px solid var(--line-2)}
+.stepper li::before{content:counter(s) " · "}
+.stepper li.on{color:var(--ink);border-color:var(--accent-lit)}
+.stepper li.done{color:var(--body);border-color:var(--accent)}
+.step-panel{display:none}.step-panel.on{display:block}
+.step-panel h3{font-size:24px;margin-bottom:6px}
+.step-panel > p{color:var(--muted);margin-bottom:22px}
+.form-2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.form-2 .full{grid-column:1/-1}
+.field input:focus,.field select:focus{outline:none;border-color:var(--accent-lit);box-shadow:0 0 0 3px var(--accent-soft)}
+.field .help{font-size:12.5px;color:var(--muted);margin-top:6px}
+.tier-badge{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;background:var(--accent-soft);border:1px solid rgba(0,59,255,.35);border-radius:12px;padding:12px 16px;margin:4px 0 18px;color:var(--accent-pale);font-size:14px}
+.tier-badge strong{color:var(--white);font-family:var(--font-display);font-size:17px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--body);cursor:pointer;margin:6px 0 4px}
+.check input{margin-top:3px;accent-color:var(--accent-lit);width:16px;height:16px}
+
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.cat{position:relative;cursor:pointer;background:var(--bg-alt);border:1px solid var(--line-2);border-radius:12px;padding:12px 12px 11px;transition:border-color .15s ease}
+.cat input{position:absolute;opacity:0;pointer-events:none}
+.cat strong{display:block;color:var(--ink);font-size:14.5px}
+.cat span{display:block;color:var(--muted);font-size:13px}
+.cat:hover{border-color:var(--accent-mid)}
+.cat:has(input:checked){border-color:var(--accent-lit);background:var(--surface-2);box-shadow:var(--glow)}
+.cat:has(input:checked) span{color:var(--accent-pale)}
+.cat:has(input:focus-visible){outline:2px solid var(--accent-hover);outline-offset:2px}
+.cat:has(input:disabled){opacity:.4;cursor:not-allowed}
+.pick{background:var(--bg-alt);border:1px solid var(--line-2);border-radius:14px;padding:20px 22px}
+.pick-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.pick-head strong{font-family:var(--font-display);color:var(--ink);font-size:20px}
+.pick-head .amt{font-family:var(--font-display);color:var(--white);font-size:26px;letter-spacing:-.02em}
+.pick .list-check{margin:10px 0 0;columns:2;column-gap:20px}
+.pick .list-check li{padding:3px 0;font-size:14px;break-inside:avoid}
+.nudge{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:12px;padding:12px 16px;border-radius:12px;border:1px dashed var(--accent-mid);background:var(--surface-2);font-size:14px;color:var(--ink-soft)}
+.nudge b{color:var(--white)}
+.counter-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.counter-row strong{color:var(--ink);display:block;font-size:15px}
+.counter-row small{color:var(--muted);font-size:13px}
+.counter{display:flex;align-items:center;gap:12px}
+.counter button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line-2);background:var(--bg-alt);color:var(--ink);font-size:18px;cursor:pointer;font-family:var(--font-body)}
+.counter button:hover{border-color:var(--accent-lit);background:var(--accent-soft)}
+.counter output{min-width:22px;text-align:center;font-family:var(--font-display);font-size:20px;color:var(--white)}
+.hint{font-size:13px;color:var(--muted);margin-top:10px}
+.sub-h{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);margin:24px 0 12px}
+.addon-list{display:grid;gap:10px}
+.addon{display:flex;align-items:center;gap:14px;cursor:pointer;background:var(--bg-alt);border:1px solid var(--line-2);border-radius:12px;padding:12px 16px;transition:border-color .15s ease}
+.addon input{accent-color:var(--accent-lit);width:18px;height:18px;flex:none}
+.addon .txt{flex:1}
+.addon strong{display:block;color:var(--ink);font-size:15px}
+.addon small{color:var(--muted);font-size:13px}
+.addon .amt{color:var(--white);font-weight:600;white-space:nowrap}
+.addon:has(input:checked){border-color:var(--accent-lit);background:var(--surface-2)}
+.addon.ctv{border-style:dashed;border-color:var(--accent-mid)}
+
+.cal{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.cal-head strong{color:var(--ink);font-family:var(--font-display);font-size:17px}
+.cal-head button{background:var(--bg-alt);border:1px solid var(--line-2);color:var(--ink);width:32px;height:32px;border-radius:50%;cursor:pointer}
+.cal-head button:disabled{opacity:.3;cursor:default}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal-grid .dow{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);text-align:center;padding-bottom:4px}
+.day{position:relative;aspect-ratio:1;border-radius:10px;border:1px solid transparent;background:none;color:var(--dim);font-family:var(--font-body);font-size:14px;cursor:default}
+.day.open{background:var(--bg-alt);border-color:var(--line-2);color:var(--ink);cursor:pointer;font-weight:600}
+.day.open:hover{border-color:var(--accent-mid)}
+.day.sel{background:var(--accent-lit);border-color:var(--accent-lit);color:#fff}
+.day.golive::after{content:"";position:absolute;left:50%;bottom:5px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#ffb547}
+.cal-legend{font-size:12.5px;color:var(--muted);margin-top:10px;display:flex;align-items:center;gap:6px}
+.cal-legend i{width:7px;height:7px;border-radius:50%;background:#ffb547;display:inline-block}
+.slots h4{font-size:15px;margin:0 0 12px;color:var(--ink)}
+.slot-list{display:grid;gap:8px}
+.slot{background:var(--bg-alt);border:1px solid var(--line-2);color:var(--ink);border-radius:10px;padding:12px;font-family:var(--font-body);font-size:15px;font-weight:600;cursor:pointer;text-align:left}
+.slot:hover{border-color:var(--accent-mid)}
+.slot.sel{background:var(--accent-lit);border-color:var(--accent-lit);color:#fff}
+.slot small{display:block;font-weight:500;font-size:12px;opacity:.75}
+.slots .empty{font-size:14px;color:var(--muted)}
+.step-nav{display:flex;justify-content:space-between;gap:12px;margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
+.step-nav .btn[disabled]{opacity:.4;pointer-events:none}
+.err{color:#ff8a8a;font-size:13.5px;margin-top:12px;min-height:1em}
+
+.book-side{position:sticky;top:96px;background:var(--surface-2);border:1px solid var(--accent);box-shadow:var(--glow);border-radius:var(--radius);padding:26px}
+.book-side h4{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);margin:0 0 14px}
+.sum-row{display:flex;justify-content:space-between;gap:12px;font-size:14px;padding:7px 0;color:var(--body)}
+.sum-row span:last-child{color:var(--ink);text-align:right;white-space:nowrap}
+.sum-total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line-2);margin-top:10px;padding-top:14px}
+.sum-total span{color:var(--ink);font-weight:600}
+.sum-total strong{font-family:var(--font-display);font-size:34px;color:var(--white);letter-spacing:-.03em}
+.sum-get{margin-top:16px;background:var(--accent-soft);border:1px solid rgba(0,59,255,.35);border-radius:12px;padding:12px 14px;font-size:13.5px;color:var(--accent-pale);line-height:1.45}
+.sum-get b{display:block;font-family:var(--font-display);font-size:24px;color:var(--white);letter-spacing:-.02em;line-height:1.15}
+.sum-when{margin-top:14px;font-size:13.5px;color:var(--muted)}
+.sum-when strong{color:var(--ink)}
+.sum-fine{font-size:12px;color:var(--muted);margin:14px 0 0}
+
+.done-panel{text-align:center;padding:30px 10px}
+.done-panel .icon-badge{margin:0 auto 18px;width:60px;height:60px;border-radius:50%;font-size:28px}
+.done-panel h3{font-size:30px}
+.done-panel p{max-width:480px;margin:0 auto 12px}
+.offer{max-width:520px;margin:26px auto 0;text-align:left;background:var(--surface-2);border:1px solid var(--accent);box-shadow:var(--glow);border-radius:16px;padding:22px}
+.offer .eyebrow{margin-bottom:10px}
+.offer h4{font-size:20px;margin:0 0 6px}
+.offer p{margin:0 0 14px;font-size:14.5px}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:14px}
+.gallery .re-photo{border-radius:var(--radius);border:1px solid var(--line)}
+.gallery .re-photo:first-child{grid-row:span 2}
+.gallery .ph{position:absolute;left:14px;bottom:12px;font-size:12px;font-weight:600;color:#fff;background:rgba(0,2,15,.6);padding:5px 11px;border-radius:999px}
+
+@media (max-width:1100px){.kit{grid-template-columns:repeat(4,minmax(0,1fr))}.cat-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:980px){
+  .book{grid-template-columns:1fr}
+  .book-side{position:static}
+  .re-phones{height:440px}.phone{width:196px}
+  .paths,.tier-grid{grid-template-columns:1fr}
+  .mam-grid{grid-template-columns:1fr}
+}
+@media (max-width:880px){.cal{grid-template-columns:1fr}}
+@media (max-width:700px){
+  .kit{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .kit-item .re-photo{aspect-ratio:1}
+  .kit-item .body{padding:12px}
+  .form-2{grid-template-columns:1fr}
+  .pick .list-check{columns:1}
+  .book-main{padding:22px}
+  .stepper li{font-size:0}.stepper li::before{font-size:13px;content:counter(s)}
+  .stepper li.on{font-size:13px}.stepper li.on::before{content:counter(s) " · "}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:200px 140px 140px}
+  .gallery .re-photo:first-child{grid-column:span 2;grid-row:auto}
+  .re-phones{height:380px}.phone{width:160px;border-radius:26px;padding:7px}.phone .screen{border-radius:20px}
+  .phone.p1{left:0}.phone.p3{right:0}.phone.p2{left:50%;margin-left:-80px}
+  .phone .cap strong{font-size:16px}
+  .seg button{padding:8px 13px;font-size:13px}
+}
+
+/* Placeholder labels and play buttons, shared by every media slot */
+.ph{position:absolute;left:14px;bottom:12px;z-index:2;font-size:12px;font-weight:600;color:#fff;background:rgba(0,2,15,.6);padding:5px 11px;border-radius:999px}
+.play-btn{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(255,255,255,.22);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;z-index:2}
+.play-btn::after{content:"";border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+.tour-ic{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;font-family:var(--font-display);font-weight:700;color:#fff;font-size:22px;text-shadow:0 2px 14px rgba(0,0,0,.4)}
+
+/* Hero with a real photo or video behind it (turned on from real-estate-media.js) */
+.hero--media{background-size:cover;background-position:center}
+/* The site's .hero::before is a sized, offset glow; reset it into a full-cover scrim. */
+.hero--media::before{content:"";position:absolute;inset:0;width:auto;height:auto;transform:none;filter:none;border-radius:0;z-index:1;background:linear-gradient(90deg,rgba(0,2,15,.95) 0%,rgba(0,2,15,.9) 30%,rgba(0,2,15,.55) 55%,rgba(0,2,15,.25) 100%),linear-gradient(0deg,rgba(0,2,15,.6) 0%,rgba(0,2,15,0) 35%)}
+@media (max-width:980px){.hero--media::before{background:linear-gradient(180deg,rgba(0,2,15,.9) 0%,rgba(0,2,15,.82) 55%,rgba(0,2,15,.55) 100%)}}
+.hero--media .container{position:relative;z-index:2}
+.hero--media{padding:84px 0 72px}
+.hero-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+
+/* Real media inside the hero phones and Content Kit tiles */
+.phone .screen.real::after{display:none}
+.phone .screen > img,.phone .screen > video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.kit-media{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--surface-2)}
+.kit-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.kit-media .play-btn{width:46px;height:46px;margin:-23px 0 0 -23px}
+.kit-media .play-btn::after{border-left-width:14px;border-top-width:9px;border-bottom-width:9px;margin-left:4px}
+.mcap{position:absolute;left:12px;bottom:12px;z-index:2;font-size:12px;font-weight:600;color:#fff;background:rgba(0,2,15,.55);backdrop-filter:blur(6px);padding:5px 11px;border-radius:999px;pointer-events:none}
+
+/* Trust bar */
+.trustbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-alt)}
+.trust-list{list-style:none;margin:0;padding:20px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 24px}
+.trust-list li{display:flex;align-items:center;justify-content:center;gap:10px;font-size:14.5px;color:var(--body);text-align:left}
+.trust-list li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--accent-hover);background:var(--accent-soft);border:1px solid rgba(0,59,255,.35)}
+.trust-list b{color:var(--white);font-weight:600}
+
+/* Showcase */
+.sv{display:grid;gap:14px;height:500px;max-width:1080px;margin:0 auto}
+.sv > .media-slot{min-height:0}
+.sv-photos{grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr}
+.sv-photos > :first-child{grid-row:span 2}
+.sv-reels{display:flex;justify-content:center;gap:18px}
+.sv-reels > .media-slot{aspect-ratio:9/16;height:100%;flex:none}
+.media-slot video{object-fit:cover;background:#000}
+.sv-pair{grid-template-columns:1fr 1fr}
+.sv-tour{grid-template-columns:1fr}
+.media-slot{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid var(--line)}
+.media-slot:not(.re-photo){background:var(--surface)}
+.media-slot img,.media-slot video,.media-slot iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;border:0}
+.media-slot.re-photo svg{height:62%}
+.show-cap{text-align:center;color:var(--muted);font-size:15px;margin:20px auto 0;max-width:680px}
+.show-cap b{color:var(--ink-soft);font-weight:600}
+
+/* Before / after */
+.ba-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:48px;align-items:center;max-width:1080px;margin:72px auto 0}
+.ba-title{font-size:clamp(24px,3vw,32px);margin:0 0 10px}
+.ba-wrap p{margin-bottom:22px}
+.ba{position:relative;aspect-ratio:3/2;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);--pos:50%;user-select:none}
+.ba-before,.ba-after{position:absolute;inset:0}
+.ba-before > *,.ba-after > *{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba-after{clip-path:inset(0 0 0 var(--pos))}
+.ba-dull{filter:saturate(.3) brightness(.68) contrast(.9) blur(.4px)}
+.ba-lbl{position:absolute;top:14px;z-index:3;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:rgba(0,2,15,.6);padding:5px 11px;border-radius:999px;pointer-events:none}
+.ba-lbl.l{left:14px}.ba-lbl.r{right:14px;background:var(--accent-lit)}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos);z-index:3;width:2px;margin-left:-1px;background:#fff;pointer-events:none}
+.ba-line::after{content:"\2194";position:absolute;top:50%;left:50%;width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:50%;background:#fff;color:#00020f;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.ba input{position:absolute;inset:0;z-index:4;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba:has(input:focus-visible){outline:2px solid var(--accent-hover);outline-offset:3px}
+
+/* Agent quotes next to booking */
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}
+.quotes .testi-card p{font-size:15px;margin:0}
+.quote-ph{border-style:dashed!important;border-color:var(--line-2)!important}
+.quote-ph p{color:var(--muted)}
+
+/* Sample listing link */
+.sample-cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+.price-note a{color:var(--accent-hover);font-weight:600}
+
+/* Sticky booking bar on phones */
+.mbar{display:none}
+@media (max-width:980px){
+  .mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:240;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 20px;border-radius:999px;background:rgba(10,12,30,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line-2);box-shadow:0 18px 40px -12px rgba(0,0,0,.8);transform:translateY(150%);transition:transform .25s ease}
+  .mbar.show{transform:none}
+  .mbar-txt{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+  .mbar-txt span{font-size:12px;color:var(--muted)}
+  .mbar-txt strong{font-family:var(--font-display);font-size:19px;color:var(--white);white-space:nowrap}
+  .mbar .btn{flex:none}
+  body{padding-bottom:84px}
+  .to-top{bottom:88px!important}
+}
+
+@media (max-width:980px){
+  .sv{height:420px}
+  .ba-wrap{grid-template-columns:1fr;gap:24px;margin-top:56px}
+  .quotes{grid-template-columns:1fr}
+  .trust-list{grid-template-columns:1fr 1fr}
+  .trust-list li{justify-content:flex-start}
+}
+@media (max-width:700px){
+  .sv{height:auto}
+  .sv-photos{grid-template-columns:1fr 1fr;grid-template-rows:220px 140px 140px}
+  .sv-photos > :first-child{grid-column:span 2;grid-row:auto}
+  .sv-reels{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;margin:0 -16px;padding-left:16px;padding-right:16px}
+  .sv-reels > .media-slot{height:auto;width:72%;scroll-snap-align:center}
+  .sv-pair{grid-template-columns:1fr}
+  .sv-pair > .media-slot{aspect-ratio:3/2}
+  .sv-tour > .media-slot{aspect-ratio:4/3}
+  .trust-list{grid-template-columns:1fr;padding:16px 0;gap:10px}
+}
+.book-main{scroll-margin-top:90px}
+</style>
+</head>
+<body>
+<header class="site-header" id="__hdr" data-active="/real-estate"></header>
+<main>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="house" viewBox="0 0 400 220">
+    <rect class="ground" x="0" y="190" width="400" height="30" fill="#141533"/>
+    <path class="house" fill="#151634" d="M70 190V112l70-52 70 52v78zM190 190V96l62-44 62 44v94zM300 190v-62h70v62z"/>
+    <g class="win" fill="#ffd27a">
+      <rect x="96" y="128" width="22" height="26" rx="2"/><rect x="162" y="128" width="22" height="26" rx="2"/>
+      <rect x="128" y="150" width="24" height="40" rx="2"/>
+      <rect x="216" y="104" width="20" height="24" rx="2"/><rect x="268" y="104" width="20" height="24" rx="2"/>
+      <rect x="216" y="146" width="72" height="30" rx="2"/>
+      <rect x="318" y="148" width="34" height="18" rx="2"/>
+    </g>
+  </symbol>
+</svg>
+
+<section class="hero">
+  <div class="container hero-split">
+    <div class="section-head">
+      <div class="eyebrow">Real Estate Media + Social</div>
+      <h1><span class="nowrap">Sell the home.</span> <span class="nowrap">Sell you too.</span></h1>
+      <p class="lead">Photos, video, drone, 3D tours and twilight on every full-service listing, plus content kits that turn each home into posts for your feed.</p>
+      <div class="hero-ctas"><a href="#book" class="btn btn-accent">Book a Shoot</a><a href="#pricing" class="btn btn-outline">See Pricing</a></div>
+      <p class="small-note" style="margin-top:18px;">Serving Tulsa, Broken Arrow, Owasso, Jenks, Bixby and Sand Springs.</p>
+    </div>
+    <div class="re-phones" aria-hidden="true">
+      <div class="phone p1"><div class="screen" data-phone="0"><div class="re-photo daylight"><svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice"><use href="#house"/></svg></div><span class="tag">Just Listed</span><div class="cap"><strong>4 bed · 3 bath</strong><span>Broken Arrow · $389,000</span></div></div></div>
+      <div class="phone p2"><div class="screen" data-phone="1"><div class="re-photo"><svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice"><use href="#house"/></svg></div><span class="tag">Reel</span><div class="play"></div><div class="cap"><strong>Come tour this Jenks beauty</strong><span>0:42 · Listing walkthrough</span></div></div></div>
+      <div class="phone p3"><div class="screen" data-phone="2"><div class="re-photo inside"></div><span class="tag">Sold</span><div class="cap"><strong>Sold in 6 days</strong><span>Thank you to my sellers!</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="trustbar" aria-label="Why agents book with us">
+  <div class="container">
+    <ul class="trust-list">
+      <li><span><b>Photos by 9 AM</b> the next business day</span></li>
+      <li><span><b>Drone, 3D tour &amp; twilight</b> in every Full Service shoot</span></li>
+      <li><span><b>Your own delivery link</b>, no logins</span></li>
+      <li><span><b>Tulsa-based</b> team</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--cream" id="work">
+  <div class="container">
+    <div class="section-head center"><div class="eyebrow">The work</div><h2>See what you get</h2><p>Every Full Service shoot includes all five. Tap through to see each one.</p></div>
+    <div class="tabs-row"><div class="seg" role="group" aria-label="Showcase" id="showTabs">
+      <button type="button" data-show="photos" aria-pressed="true">Photos</button>
+      <button type="button" data-show="video" aria-pressed="false">Video</button>
+      <button type="button" data-show="drone" aria-pressed="false">Drone</button>
+      <button type="button" data-show="tour" aria-pressed="false">3D Tour</button>
+      <button type="button" data-show="twilight" aria-pressed="false">Twilight</button>
+    </div></div>
+    <div id="showPanel"></div>
+    <p class="show-cap" id="showCap"></p>
+
+    <div class="ba-wrap">
+      <div>
+        <div class="eyebrow">Before / after</div>
+        <h3 class="ba-title">Straight off the camera vs. Big Mammoth</h3>
+        <p>Same frame, same day. Drag the slider to see what our editing does: brighter rooms, true colors and clean lines. This is the difference buyers see when they scroll past your listing.</p>
+        <a href="#book" class="btn btn-accent btn-sm">Book a Shoot</a>
+      </div>
+      <div class="ba" id="ba">
+        <div class="ba-before" id="baBefore"></div>
+        <div class="ba-after" id="baAfter"></div>
+        <span class="ba-lbl l">Unedited</span><span class="ba-lbl r">Big Mammoth</span>
+        <span class="ba-line" aria-hidden="true"></span>
+        <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Compare the unedited photo with the Big Mammoth edit">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-head center"><div class="eyebrow">Pricing</div><h2>Simple, by square footage</h2><p>Pick a category. The price is set by the size of the home.</p></div>
+    <div class="tabs-row"><div class="seg" role="group" aria-label="Category" id="catTabs">
+      <button type="button" data-tab="listings" aria-pressed="true">Listings</button>
+      <button type="button" data-tab="kits" aria-pressed="false">Content Kits</button>
+      <button type="button" data-tab="mammoth" aria-pressed="false">The Mammoth</button>
+    </div></div>
+    <div class="subtabs" id="listSub"><div class="seg" role="group" aria-label="Listing type">
+      <button type="button" data-sub="full" aria-pressed="true">Full Service</button>
+      <button type="button" data-sub="photo" aria-pressed="false">Photos Only</button>
+    </div></div>
+    <div id="pricePanel"></div>
+  </div>
+</section>
+
+<section class="section section--cream" id="book">
+  <div class="container">
+    <div class="section-head center"><div class="eyebrow">Book online</div><h2>Book your shoot</h2><p>Tell us about the home, pick your package and a time, and you're on the calendar.</p></div>
+    <div class="book">
+      <div class="book-main">
+        <div class="book-note">Preview: payments and the calendar aren't connected yet. Nothing here is charged or booked.</div>
+        <ol class="stepper" id="stepper"><li>The home</li><li>Package</li><li>Date &amp; time</li><li>Checkout</li></ol>
+
+        <form id="bookForm" novalidate>
+          <div class="step-panel on" data-step="0">
+            <h3>Tell us about the home</h3>
+            <p>Your price is set by square footage, so we bring the right amount of time.</p>
+            <div id="homeFields">
+              <div class="form-2">
+                <div class="field full"><label for="addr">Property address</label><input id="addr" name="addr" autocomplete="street-address" placeholder="1234 Maple St, Broken Arrow, OK"></div>
+                <div class="field"><label for="sqft">Square feet</label><input id="sqft" name="sqft" inputmode="numeric" placeholder="1,850"><div class="help">Heated square footage from the listing.</div></div>
+                <div class="field"><label for="golive">List date <span style="color:var(--muted);font-weight:500">(optional)</span></label><input id="golive" name="golive" type="date"><div class="help">We'll suggest shoot days before it.</div></div>
+              </div>
+              <div class="tier-badge" id="tierBadge" hidden></div>
+            </div>
+            <label class="check"><input type="checkbox" id="noListing"> <span>I don't have a listing yet. I'm interested in The Mammoth.</span></label>
+            <div class="err" id="err0"></div>
+          </div>
+
+          <div class="step-panel" data-step="1">
+            <h3>Choose your package</h3>
+            <p id="pkgSub">Prices shown for your home's size.</p>
+            <div class="cat-grid" id="catGrid">
+              <label class="cat"><input type="radio" name="cat" value="photo"><strong>Photos Only</strong><span data-p="photo"></span></label>
+              <label class="cat"><input type="radio" name="cat" value="full" checked><strong>Full Service</strong><span data-p="full"></span></label>
+              <label class="cat"><input type="radio" name="cat" value="kit"><strong>Content Kit</strong><span data-p="kit"></span></label>
+              <label class="cat"><input type="radio" name="cat" value="mammoth"><strong>The Mammoth</strong><span>$1,800/mo</span></label>
+            </div>
+
+            <div id="singlePick">
+              <div class="pick"><div class="pick-head"><strong id="pickName"></strong><span class="amt" id="pickAmt"></span></div><ul class="list-check" id="pickList"></ul></div>
+              <div class="nudge" id="nudge"></div>
+            </div>
+
+            <div id="mammothPick" hidden>
+              <div class="pick" style="margin-bottom:6px;"><div class="pick-head"><strong>The Mammoth</strong><span class="amt">$1,800/mo</span></div><ul class="list-check"><li>16 social posts a month</li><li>2 Content Kits included</li><li>Your own agent page with every listing</li><li>Always-on Meta campaign</li></ul></div>
+              <div class="sub-h">Listings this month</div>
+              <div class="counter-row"><div><strong>Up to 2,000 sq ft</strong><small>Included, then $550 per extra kit</small></div><div class="counter" data-k="q"><button type="button" data-d="-1" aria-label="Fewer">−</button><output>0</output><button type="button" data-d="1" aria-label="More">+</button></div></div>
+              <div class="counter-row"><div><strong>2,001–3,000 sq ft</strong><small>+$200 on an included spot, then $725 per extra kit</small></div><div class="counter" data-k="g"><button type="button" data-d="-1" aria-label="Fewer">−</button><output>0</output><button type="button" data-d="1" aria-label="More">+</button></div></div>
+              <div class="counter-row"><div><strong>3,001+ sq ft</strong><small>+$500 on an included spot, then $975 per extra kit</small></div><div class="counter" data-k="e"><button type="button" data-d="-1" aria-label="Fewer">−</button><output>0</output><button type="button" data-d="1" aria-label="More">+</button></div></div>
+              <p class="hint" id="mamHint"></p>
+            </div>
+
+            <div class="sub-h" id="addonHead">Add-ons</div>
+            <div class="addon-list" id="addonList"></div>
+            <div class="err" id="err1"></div>
+          </div>
+
+          <div class="step-panel" data-step="2">
+            <h3 id="calTitle">Pick a shoot time</h3>
+            <p id="calSub"></p>
+            <div class="cal">
+              <div>
+                <div class="cal-head"><button type="button" id="calPrev" aria-label="Previous month">‹</button><strong id="calMonth"></strong><button type="button" id="calNext" aria-label="Next month">›</button></div>
+                <div class="cal-grid" id="calGrid"></div>
+                <div class="cal-legend" id="calLegend" hidden><i></i> Your list date</div>
+              </div>
+              <div class="slots"><h4 id="slotDay">Choose a day</h4><div class="slot-list" id="slotList"><p class="empty">Open days are highlighted.</p></div></div>
+            </div>
+            <div class="err" id="err2"></div>
+          </div>
+
+          <div class="step-panel" data-step="3">
+            <h3>Your details</h3>
+            <p>We'll text you your Big Mammoth link and email a calendar invite and receipt.</p>
+            <div class="form-2">
+              <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name"></div>
+              <div class="field"><label for="brokerage">Brokerage</label><input id="brokerage" name="brokerage" autocomplete="organization"></div>
+              <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+              <div class="field"><label for="phone">Mobile phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+              <div class="field full" id="igField"><label for="ig">Instagram handle</label><input id="ig" name="ig" placeholder="@yourname"></div>
+            </div>
+            <div class="err" id="err3"></div>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-outline" id="backBtn" disabled>Back</button>
+            <button type="button" class="btn btn-accent" id="nextBtn">Continue</button>
+          </div>
+        </form>
+
+        <div class="done-panel" id="donePanel" hidden>
+          <div class="icon-badge">✓</div>
+          <h3>You're on the calendar.</h3>
+          <p id="doneText"></p>
+          <p class="small-note">Your Big Mammoth link is on its way to <span id="donePhone"></span>, with a calendar invite and receipt to <span id="doneEmail"></span>.</p>
+          <div class="offer" id="offer" hidden>
+            <div class="eyebrow">One-time offer</div>
+            <h4>Listing 2+ homes a month?</h4>
+            <p id="offerText"></p>
+            <a href="#pricing" class="btn btn-accent btn-sm" data-tab="mammoth">Tell me about The Mammoth</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="book-side" aria-live="polite">
+        <h4>Your order</h4>
+        <div id="sumRows"></div>
+        <div class="sum-total"><span id="sumLabel">Due today</span><strong id="sumTotal">$0</strong></div>
+        <div class="sum-get" id="sumGet"></div>
+        <div class="sum-when" id="sumWhen"></div>
+        <p class="sum-fine" id="sumFine"></p>
+      </aside>
+    </div>
+    <div class="quotes" id="quotes" aria-label="What agents say"></div>
+  </div>
+</section>
+
+<section class="section" id="kits">
+  <div class="container">
+    <div class="section-head center"><div class="eyebrow">Content Kits</div><h2>What one listing becomes</h2><p>Every kit turns the shoot into posts ready for your feed. Kits for homes over 3,000 sq ft get the full launch-to-sold set.</p></div>
+    <div class="kit">
+      <div class="kit-item" data-kit="carousel"><div class="re-photo daylight"><svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#house"/></svg><span class="lbl">Carousel</span></div><div class="body"><h3>Photo carousel</h3><p>The best 10 photos as a swipeable post.</p></div></div>
+      <div class="kit-item" data-kit="reel"><div class="re-photo"><svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#house"/></svg><span class="lbl">Reel</span></div><div class="body"><h3>Listing Reel</h3><p>A room-by-room walkthrough for Reels and TikTok.</p></div></div>
+      <div class="kit-item" data-kit="intro"><div class="re-photo inside"><span class="lbl">Video</span><span class="mid">Meet your agent</span></div><div class="body"><h3>Agent intro video</h3><p>You on camera introducing the home.</p></div></div>
+      <div class="kit-item" data-kit="justListed"><div class="re-photo daylight"><svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#house"/></svg><span class="lbl">Graphic</span><span class="mid">JUST LISTED</span></div><div class="body"><h3>Just Listed</h3><p>A branded graphic the day it hits the market.</p></div></div>
+      <div class="kit-item elite" data-kit="stories"><div class="re-photo"><span class="lbl">Stories</span><span class="mid">Open house Sat 1–3</span></div><div class="body"><span class="elite-tag">3,001+ sq ft kits</span><h3>Stories set</h3><p>Open house and price details with link stickers.</p></div></div>
+      <div class="kit-item elite" data-kit="underContract"><div class="re-photo daylight"><svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#house"/></svg><span class="lbl">Graphic</span><span class="mid">UNDER CONTRACT</span></div><div class="body"><span class="elite-tag">3,001+ sq ft kits</span><h3>Under Contract</h3><p>Keep the momentum going while it closes.</p></div></div>
+      <div class="kit-item elite" data-kit="sold"><div class="re-photo inside"><span class="lbl">Graphic</span><span class="mid">SOLD</span></div><div class="body"><span class="elite-tag">3,001+ sq ft kits</span><h3>Sold</h3><p>The post that wins your next listing.</p></div></div>
+    </div>
+    <div class="kit-sum"><span>Homes up to 3,000 sq ft</span><b>4</b><span>posts</span><span class="sep">·</span><span>Homes 3,001+ sq ft</span><b>7</b><span>posts</span></div>
+    <p class="price-note">Every kit also comes with your own listing link: a page for the home in your branding, ready to share in your bio, texts and emails.</p>
+    <div class="sample-cta"><a href="/listing-sample" class="btn btn-outline">See a sample listing link</a><a href="#book" class="btn btn-accent" data-book="kit">Book a Content Kit</a></div>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-head center"><h2>FAQ's</h2><p>The fine print, kept short on purpose.</p></div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      <div class="faq-item"><button class="faq-q">How do I get my photos and videos?<span class="plus">+</span></button><div class="faq-a"><p>We text you your own Big Mammoth link. Open it on any device to download everything sized for the MLS, Instagram and print, or to ask for edits. No account or password needed.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How fast is delivery?<span class="plus">+</span></button><div class="faq-a"><p>Photos are ready by 9 AM the next business day. Video, the 3D tour and Content Kit posts follow within 48 hours.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How does twilight work?<span class="plus">+</span></button><div class="faq-a"><p>Twilight photos are taken at sunset on shoot day. We'll confirm the exact time with you after you book.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What's the listing link in a Content Kit?<span class="plus">+</span></button><div class="faq-a"><p>A page for the home in your branding, with the photos, video, 3D tour and your contact details. Share it in your bio, texts and emails. It goes live on your list date.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do I need to be at the shoot?<span class="plus">+</span></button><div class="faq-a"><p>For Content Kits and The Mammoth, just for the first 20 minutes to film your agent intro video. For Listings, a lockbox works fine.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How is square footage counted?<span class="plus">+</span></button><div class="faq-a"><p>We use the heated square footage on the listing: up to 2,000 sq ft, 2,001 to 3,000, or 3,001 and up.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What does TV add to The Mammoth?<span class="plus">+</span></button><div class="faq-a"><p>For $250 a month, we produce a new 30-second TV spot for you every quarter and run it on streaming TV in your area, pointing viewers to your agent page.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What if I don't use both Mammoth listings?<span class="plus">+</span></button><div class="faq-a"><p>Unused listings don't roll over. We put that time into extra personal-brand content for your feed instead.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Can I reschedule?<span class="plus">+</span></button><div class="faq-a"><p>Yes, free of charge up to 24 hours before the shoot. Bad weather reschedules are always free.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta-band">
+      <div><h2>Not sure which fits?</h2><p style="color:rgba(255,255,255,.8);margin:0;">Book a free 15-minute call and we'll map out your next listing.</p></div>
+      <a href="/contact#calendar" class="btn btn-primary">Book a Call</a>
+    </div>
+  </div>
+</section>
+
+<div class="mbar" id="mbar" aria-live="polite">
+  <div class="mbar-txt"><span id="mbarLbl">Listings from</span><strong id="mbarAmt">$220</strong></div>
+  <button type="button" class="btn btn-accent btn-sm" id="mbarBtn" data-mode="book">Book a Shoot</button>
+</div>
+
+</main>
+<footer class="site-footer" id="__ftr"></footer>
+<script src="/assets/script.js?v=20261019" defer></script>
+<script src="/assets/real-estate-media.js?v=1"></script>
+<script>
+(function () {
+  // All prices live here. The pricing tables, booking form and checkout read from this.
+  var TIERS = [
+    { k: 'q', range: 'Up to 2,000 sq ft', max: 2000 },
+    { k: 'g', range: '2,001–3,000 sq ft', max: 3000 },
+    { k: 'e', range: '3,001+ sq ft', max: Infinity }
+  ];
+  var PKG = {
+    full: { label: 'Full Service', names: { q: 'Quaint Quarters', g: 'Grand Residence', e: 'Elite Estate' }, price: { q: 475, g: 650, e: 875 },
+      includes: function () { return ['Photos', 'Listing video', 'Drone', '3D tour', 'Twilight photos']; }, video: true, posts: { q: 0, g: 0, e: 0 } },
+    photo: { label: 'Photos Only', names: { q: 'Ultra Photos', g: 'Pro Photos', e: 'Deluxe Photos' }, price: { q: 220, g: 275, e: 350 },
+      includes: function () { return ['Photos', 'Drone', 'Twilight photos']; }, video: false, posts: { q: 0, g: 0, e: 0 } },
+    kit: { label: 'Content Kit', names: { q: 'Content Kit', g: 'Content Kit', e: 'Content Kit' }, price: { q: 650, g: 850, e: 1150 },
+      includes: function (t) { return ['Photos', 'Listing video', 'Drone', '3D tour', 'Twilight photos', 'Agent intro video', (t === 'e' ? 7 : 4) + ' posts ready for your feed', 'Your own listing link']; }, video: true, posts: { q: 4, g: 4, e: 7 } }
+  };
+  var MAM = { base: 1800, included: 2, posts: 16, upgrade: { q: 0, g: 200, e: 500 }, extra: { q: 550, g: 725, e: 975 }, ctv: 250 };
+  var ADDONS = [
+    { k: 'boost', name: 'Listing Boost', note: '2-week Meta ad for this listing, $100 ad spend included', price: 199, when: function (c) { return c !== 'photo'; } },
+    { k: 'rush', name: 'Next-morning delivery', note: 'Everything by 9 AM, video included', price: 75, when: function (c) { return c !== 'mammoth'; } },
+    { k: 'reel', name: 'Extra Reel', note: 'A second cut from the same footage', price: 149, when: function (c) { return c === 'full' || c === 'kit' || c === 'mammoth'; } },
+    { k: 'ctv', name: 'Add TV', note: 'A new 30-second spot every quarter, on streaming TV in your area', price: 250, monthly: true, when: function (c) { return c === 'mammoth'; } }
+  ];
+  var SLOT_TIMES = ['9:00 AM', '11:30 AM', '2:00 PM'];
+
+  function $(id) { return document.getElementById(id); }
+  function money(n) { return '$' + n.toLocaleString('en-US'); }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function tierOf(sqft) { for (var i = 0; i < TIERS.length; i++) if (sqft <= TIERS[i].max) return TIERS[i]; }
+  function rangeText(t) { return t.range.replace('Up to', 'up to'); }
+  // Full Service and Photos Only have their own names per size; Content Kits are named by size.
+  function pkgTitle(cat, t) { return cat === 'kit' ? 'Content Kit, ' + rangeText(t) : PKG[cat].names[t.k]; }
+  function tierByKey(k) { return TIERS.filter(function (t) { return t.k === k; })[0]; }
+
+  /* ---------- Pricing tables ---------- */
+  var view = { tab: 'listings', sub: 'full' };
+  function card(cat, t, featured) {
+    var p = PKG[cat];
+    var posts = p.posts[t.k] ? '<span class="posts">' + p.posts[t.k] + ' posts + your listing link</span>' : '';
+    return '<div class="price-card' + (featured ? ' featured' : '') + '">' + (featured ? '<div class="badge-popular">Most Popular</div>' : '') +
+      '<h3>' + esc(p.names[t.k]) + '</h3><p class="range">' + t.range + '</p>' +
+      '<div class="price">' + money(p.price[t.k]) + ' <small>per listing</small></div>' + posts +
+      '<ul class="list-check">' + p.includes(t.k).map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>' +
+      '<a href="#book" class="btn ' + (featured ? 'btn-accent' : 'btn-primary') + '" data-book="' + cat + '" data-tier="' + t.k + '">Book ' + (cat === 'kit' ? 'this kit' : esc(p.names[t.k])) + '</a></div>';
+  }
+  function renderPricing() {
+    document.querySelectorAll('#catTabs button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.tab === view.tab); });
+    document.querySelectorAll('#listSub button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.sub === view.sub); });
+    $('listSub').hidden = view.tab !== 'listings';
+    var html;
+    if (view.tab === 'mammoth') {
+      html = '<div class="mam-grid"><div class="price-card featured"><div class="badge-popular">Best Value</div>' +
+        '<h3 style="font-size:24px;margin-bottom:4px;">The Mammoth</h3><p class="range">For agents listing every month.</p>' +
+        '<div class="price">' + money(MAM.base) + ' <small>per month</small></div>' +
+        '<ul class="list-check"><li>16 social posts a month: market updates, neighborhood spotlights, buyer &amp; seller tips</li><li>2 Content Kits included every month (homes up to 2,000 sq ft; bigger homes pay the difference)</li><li>Extra Content Kits at member prices: ' + money(MAM.extra.q) + ' / ' + money(MAM.extra.g) + ' / ' + money(MAM.extra.e) + '</li><li>Your own agent page: every listing, past and present, in one link</li><li>Always-on Meta campaign pointing to your page</li><li>Slow month? Unused listings become extra personal-brand content</li></ul>' +
+        '<a href="#book" class="btn btn-accent" data-book="mammoth">Start The Mammoth</a></div>' +
+        '<div class="ctv-card"><div class="eyebrow" style="align-self:flex-start;">Mammoth add-on</div><h3>Add TV</h3>' +
+        '<div class="tv"><div class="re-photo"><svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#house"/></svg></div><span class="tvcap">Your Broken Arrow agent</span><span class="qr"></span></div>' +
+        '<div class="price" style="margin:0 0 14px;">+' + money(MAM.ctv) + ' <small>per month</small></div>' +
+        '<ul class="list-check"><li>A new 30-second TV spot every quarter</li><li>Runs on streaming TV in your area</li><li>A QR code sends viewers to your agent page</li></ul></div></div>' +
+        '<p class="price-note">3-month minimum, then month to month. Pay for the year up front and the twelfth month is free.</p>';
+    } else {
+      var cat = view.tab === 'kits' ? 'kit' : view.sub;
+      html = '<div class="tier-grid">' + TIERS.map(function (t) { return card(cat, t, t.k === 'g'); }).join('') + '</div>' +
+        '<p class="price-note">' + (cat === 'kit' ? 'Content Kits include everything in Full Service. Kits for homes over 3,000 sq ft get 7 posts instead of 4. <a href="#kits">See what\u2019s in a kit</a> \u00b7 <a href="/listing-sample">See a sample listing link</a>'
+          : cat === 'full' ? 'Want posts for your feed too? Content Kits add an agent intro video, ready-to-post content and your own listing link, from ' + money(PKG.kit.price.q) + '.'
+          : 'Need video or a 3D tour? Full Service adds both, from ' + money(PKG.full.price.q) + '.') + '</p>';
+    }
+    $('pricePanel').innerHTML = html;
+  }
+  document.querySelectorAll('#catTabs button').forEach(function (b) { b.addEventListener('click', function () { view.tab = b.dataset.tab; renderPricing(); }); });
+  document.querySelectorAll('#listSub button').forEach(function (b) { b.addEventListener('click', function () { view.sub = b.dataset.sub; renderPricing(); }); });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('[data-tab]');
+    if (a && a.tagName === 'A') { view.tab = a.dataset.tab; renderPricing(); }
+  });
+
+  /* ---------- Booking ---------- */
+  var form = $('bookForm');
+  var panels = form.querySelectorAll('.step-panel');
+  var steps = document.querySelectorAll('#stepper li');
+  var backBtn = $('backBtn'), nextBtn = $('nextBtn');
+  var state = { step: 0, tier: null, preset: null, sqft: null, count: { q: 0, g: 0, e: 0 }, day: null, time: null, month: 0, mamTouched: false };
+
+  function cat() { return form.cat.value; }
+  function noListing() { return $('noListing').checked; }
+  function chosenAddons() { return Array.prototype.map.call(form.querySelectorAll('[name=addon]:checked'), function (c) { return c.value; }); }
+  function addonByKey(k) { return ADDONS.filter(function (a) { return a.k === k; })[0]; }
+  function listingCount() { return state.count.q + state.count.g + state.count.e; }
+  function isKickoff() { return cat() === 'mammoth' && listingCount() === 0; }
+  function listDate() { var v = form.golive.value; return v ? new Date(v + 'T00:00:00') : null; }
+
+  // Accepts what agents actually type: "2450", "2,450", "2,450.5", "2.5k", "2,450 sq ft".
+  function parseSqft(v) {
+    var s = String(v).toLowerCase().replace(/,/g, '').replace(/square\s*feet|sq\.?\s*ft\.?|sqft|sf/g, '').trim();
+    var m = s.match(/^(\d+(?:\.\d+)?)\s*(k)?$/);
+    return m ? Math.round(parseFloat(m[1]) * (m[2] ? 1000 : 1)) : NaN;
+  }
+  var MIN_SQFT = 300;
+
+  function readTier() {
+    var raw = String(form.sqft.value).trim();
+    var n = parseSqft(raw);
+    var valid = n >= MIN_SQFT;
+    state.sqft = valid ? n : null;
+    state.tier = valid ? tierOf(n) : (raw ? null : state.preset);
+    var b = $('tierBadge');
+    b.hidden = !raw && !state.preset;
+    if (valid) b.innerHTML = '<strong>' + n.toLocaleString('en-US') + ' sq ft</strong><span>Size range: ' + rangeText(state.tier) + '. Next, pick your package.</span>';
+    else if (raw) b.innerHTML = '<span>Enter the square footage as a number, like 1,850.</span>';
+    else if (state.preset) b.innerHTML = '<strong>' + state.preset.range + '</strong><span>You picked a package for this size. Add the square footage to confirm.</span>';
+  }
+
+  function quote() {
+    var rows = [], total = 0, monthly = false, get = '';
+    var adds = isKickoff() ? chosenAddons().filter(function (k) { return k === 'ctv'; }) : chosenAddons();
+    if (cat() === 'mammoth') {
+      monthly = true;
+      var c = state.count, left = MAM.included, used = { q: 0, g: 0, e: 0 };
+      ['q', 'g', 'e'].forEach(function (k) { used[k] = Math.min(c[k], left); left -= used[k]; });
+      total = MAM.base;
+      rows.push(['The Mammoth, first month', money(MAM.base)]);
+      rows.push(['Included Content Kits', (used.q + used.g + used.e) + ' of ' + MAM.included]);
+      ['g', 'e'].forEach(function (k) { if (used[k]) { var v = used[k] * MAM.upgrade[k]; total += v; rows.push(['Included kit upgrade, ' + rangeText(tierByKey(k)) + ' × ' + used[k], money(v)]); } });
+      ['q', 'g', 'e'].forEach(function (k) { var x = c[k] - used[k]; if (x) { var v = x * MAM.extra[k]; total += v; rows.push(['Extra kit, ' + rangeText(tierByKey(k)) + ' × ' + x, money(v)]); } });
+      var posts = MAM.posts + 4 * (c.q + c.g) + 7 * c.e;
+      get = '<b>' + posts + ' posts</b>for your feed this month, plus your agent page' + (adds.indexOf('ctv') > -1 ? ' and a TV spot' : '');
+    } else {
+      var p = PKG[cat()], t = state.tier || TIERS[0];
+      total = p.price[t.k];
+      rows.push([cat() === 'kit' ? pkgTitle('kit', t) : p.names[t.k] + ' (' + p.label + ', ' + rangeText(t) + ')', money(total)]);
+      get = p.posts[t.k]
+        ? '<b>' + p.posts[t.k] + ' posts + your listing link</b>' + p.includes(t.k).slice(0, 6).join(', ')
+        : '<b>' + p.includes(t.k).length + ' deliverables</b>' + p.includes(t.k).join(', ');
+    }
+    adds.forEach(function (k) {
+      var a = addonByKey(k); total += a.price;
+      rows.push([a.name, '+' + money(a.price) + (a.monthly ? '/mo' : '')]);
+    });
+    return { rows: rows, total: total, monthly: monthly, get: get };
+  }
+
+  function fmtDate(d) { return d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }); }
+
+  function renderSummary() {
+    if (cat() !== 'mammoth' && !state.tier) {
+      $('sumRows').innerHTML = '';
+      $('sumTotal').textContent = '\u2014';
+      $('sumGet').innerHTML = '<b>Your price</b>Enter the home\u2019s square footage and we\u2019ll show your price.';
+      $('sumWhen').innerHTML = '';
+      $('sumFine').textContent = '';
+      renderMbar();
+      return;
+    }
+    var q = quote();
+    $('sumRows').innerHTML = q.rows.map(function (r) { return '<div class="sum-row"><span>' + esc(r[0]) + '</span><span>' + r[1] + '</span></div>'; }).join('');
+    $('sumTotal').textContent = money(q.total);
+    $('sumGet').innerHTML = q.get;
+    $('sumWhen').innerHTML = state.day && state.time ? (isKickoff() ? 'Kickoff call: ' : 'Shoot: ') + '<strong>' + fmtDate(state.day) + ', ' + state.time + '</strong>' : '';
+    $('sumFine').textContent = q.monthly
+      ? '3-month minimum, then month to month. Billed monthly from today.'
+      : 'Free rescheduling up to 24 hours before.';
+    renderMbar();
+  }
+
+  function renderPackage() {
+    var t = state.tier || TIERS[0];
+    $('pkgSub').textContent = noListing() ? "No listing yet, so we'll set you up on The Mammoth and book a kickoff call." : 'Prices for a home ' + rangeText(t) + '. Each package has its own price for this size.';
+    form.querySelectorAll('[data-p]').forEach(function (s) { var c = s.dataset.p; s.textContent = (c === 'kit' ? '' : PKG[c].names[t.k] + ' · ') + money(PKG[c].price[t.k]); });
+    form.querySelectorAll('[name=cat]').forEach(function (r) { r.disabled = noListing() && r.value !== 'mammoth'; });
+    var c = cat(), isMam = c === 'mammoth';
+    $('singlePick').hidden = isMam;
+    $('mammothPick').hidden = !isMam;
+    if (!isMam) {
+      var p = PKG[c];
+      $('pickName').textContent = pkgTitle(c, t);
+      $('pickAmt').textContent = money(p.price[t.k]);
+      $('pickList').innerHTML = p.includes(t.k).map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('');
+      var n = $('nudge');
+      if (c === 'photo') n.innerHTML = '<span>Add video and a 3D tour for <b>' + money(PKG.full.price[t.k] - p.price[t.k]) + ' more</b> with Full Service.</span><button type="button" class="btn btn-outline btn-sm" data-switch="full">Upgrade</button>';
+      else if (c === 'full') n.innerHTML = '<span>For <b>' + money(PKG.kit.price[t.k] - p.price[t.k]) + ' more</b>, get an agent intro video, ' + PKG.kit.posts[t.k] + ' posts ready for your feed and your own listing link.</span><button type="button" class="btn btn-outline btn-sm" data-switch="kit">Make it a Content Kit</button>';
+      else n.innerHTML = '<span>Listing 2+ homes a month? <b>The Mammoth</b> includes 2 kits plus 16 posts for ' + money(MAM.base) + '/mo.</span><button type="button" class="btn btn-outline btn-sm" data-switch="mammoth">See The Mammoth</button>';
+    } else {
+      form.querySelectorAll('.counter').forEach(function (el) { el.querySelector('output').textContent = state.count[el.dataset.k]; });
+      $('mamHint').textContent = isKickoff()
+        ? "No listings yet? No problem. Next you'll pick a time for your kickoff call, and we'll start on your 16 posts."
+        : "You'll book your first shoot now. Schedule the rest from your Big Mammoth link as listings come in.";
+    }
+    var checked = chosenAddons();
+    var list = ADDONS.filter(function (a) { return a.when(c) && !(isKickoff() && a.k !== 'ctv'); });
+    $('addonHead').hidden = !list.length;
+    $('addonList').innerHTML = list.map(function (a) {
+      return '<label class="addon' + (a.k === 'ctv' ? ' ctv' : '') + '"><input type="checkbox" name="addon" value="' + a.k + '"' + (checked.indexOf(a.k) > -1 ? ' checked' : '') + '><span class="txt"><strong>' + a.name + '</strong><small>' + a.note + '</small></span><span class="amt">+' + money(a.price) + (a.monthly ? '/mo' : '') + '</span></label>';
+    }).join('');
+    renderSummary();
+  }
+
+  // Until the agent adjusts the counters, The Mammoth starts with this home as its one listing.
+  function seedMammoth() {
+    if (cat() !== 'mammoth' || state.mamTouched || noListing()) return;
+    state.count = { q: 0, g: 0, e: 0 };
+    state.count[(state.tier || TIERS[0]).k] = 1;
+  }
+
+  function setCat(v) {
+    form.querySelector('[name=cat][value=' + v + ']').checked = true;
+    seedMammoth();
+    renderPackage();
+  }
+
+  function goTo(n) {
+    state.step = n;
+    panels.forEach(function (p, i) { p.classList.toggle('on', i === n); });
+    steps.forEach(function (s, i) { s.classList.toggle('on', i === n); s.classList.toggle('done', i < n); });
+    backBtn.disabled = n === 0;
+    if (n === 1) { seedMammoth(); renderPackage(); }
+    if (n === 2) {
+      $('calTitle').textContent = isKickoff() ? 'Pick a kickoff call time' : 'Pick a shoot time';
+      var needsAgent = cat() === 'kit' || cat() === 'mammoth';
+      $('calSub').textContent = isKickoff() ? 'A 30-minute call to plan your first month of content.'
+        : 'Shoots take about 2 hours, and twilight photos are taken at sunset.' + (needsAgent ? ' Be there for the first 20 minutes to film your intro video.' : '') + (listDate() ? ' Days before your list date are best.' : '');
+      var ld = listDate();
+      if (ld) state.month = Math.max(0, Math.min(1, (ld.getFullYear() - today.getFullYear()) * 12 + ld.getMonth() - today.getMonth()));
+      renderCal();
+    }
+    if (n === 3) $('igField').hidden = !(cat() === 'kit' || cat() === 'mammoth');
+    nextBtn.textContent = n < 3 ? 'Continue' : 'Pay ' + money(quote().total) + ' & Book';
+    renderSummary();
+  }
+
+  function validate(n) {
+    var err = '';
+    if (n === 0 && !noListing()) {
+      if (!form.addr.value.trim()) err = 'Add the property address so we know where to go.';
+      else if (!form.sqft.value.trim()) err = 'Add the square footage so we can price your shoot.';
+      else if (!state.sqft) err = 'That square footage doesn\u2019t look right. Enter a number, like 1,850.';
+    }
+    if (n === 2 && !(state.day && state.time)) err = 'Pick a day and a time.';
+    if (n === 3) {
+      if (!form.name.value.trim()) err = 'Add your name.';
+      else if (!form.email.value || !form.email.checkValidity()) err = 'Add a valid email for your invite and receipt.';
+      else if (!form.phone.value.trim()) err = "Add your mobile number. That's where we text your Big Mammoth link.";
+    }
+    var box = $('err' + n);
+    if (box) box.textContent = err;
+    return !err;
+  }
+
+  // Calendar preview: weekdays from tomorrow up to 6 weeks out, with a few days and slots shown as taken.
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  function isOpen(d) {
+    var diff = (d - today) / 864e5, dow = d.getDay();
+    var ld = listDate();
+    return diff >= 1 && diff <= 42 && dow > 0 && dow < 6 && d.getDate() % 7 !== 3 && !(ld && d >= ld && !isKickoff());
+  }
+  function slotsFor(d) { return SLOT_TIMES.filter(function (t, i) { return (d.getDate() + i) % 4 !== 0; }); }
+  function renderCal() {
+    var first = new Date(today.getFullYear(), today.getMonth() + state.month, 1);
+    var ld = listDate();
+    $('calMonth').textContent = first.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+    $('calPrev').disabled = state.month === 0;
+    $('calNext').disabled = state.month >= 1;
+    $('calLegend').hidden = !ld || isKickoff();
+    var html = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].map(function (d) { return '<span class="dow">' + d + '</span>'; }).join('');
+    for (var i = 0; i < first.getDay(); i++) html += '<span></span>';
+    var days = new Date(first.getFullYear(), first.getMonth() + 1, 0).getDate();
+    for (var n = 1; n <= days; n++) {
+      var d = new Date(first.getFullYear(), first.getMonth(), n);
+      var open = isOpen(d), sel = state.day && d.getTime() === state.day.getTime();
+      var gl = ld && !isKickoff() && d.getTime() === ld.getTime();
+      html += '<button type="button" class="day' + (open ? ' open' : '') + (sel ? ' sel' : '') + (gl ? ' golive' : '') + '"' + (open ? ' data-ts="' + d.getTime() + '"' : ' disabled') + (gl ? ' title="Your list date"' : '') + '>' + n + '</button>';
+    }
+    $('calGrid').innerHTML = html;
+    renderSlots();
+  }
+  function renderSlots() {
+    if (!state.day) { $('slotDay').textContent = 'Choose a day'; $('slotList').innerHTML = '<p class="empty">Open days are highlighted.</p>'; return; }
+    $('slotDay').textContent = fmtDate(state.day);
+    var times = isKickoff() ? ['10:00 AM', '1:00 PM', '3:30 PM'] : slotsFor(state.day);
+    $('slotList').innerHTML = times.map(function (t) {
+      return '<button type="button" class="slot' + (state.time === t ? ' sel' : '') + '" data-t="' + t + '">' + t + '<small>' + (isKickoff() ? '30 min · video call' : 'About 2 hours, then twilight at sunset') + '</small></button>';
+    }).join('');
+  }
+
+  $('calGrid').addEventListener('click', function (e) {
+    var b = e.target.closest('.day.open'); if (!b) return;
+    state.day = new Date(Number(b.dataset.ts)); state.time = null;
+    renderCal(); renderSummary(); $('err2').textContent = '';
+  });
+  $('slotList').addEventListener('click', function (e) {
+    var b = e.target.closest('.slot'); if (!b) return;
+    state.time = b.dataset.t; renderSlots(); renderSummary(); $('err2').textContent = '';
+  });
+  $('calPrev').addEventListener('click', function () { state.month = 0; renderCal(); });
+  $('calNext').addEventListener('click', function () { state.month = 1; renderCal(); });
+
+  form.querySelectorAll('.counter').forEach(function (c) {
+    c.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      var k = c.dataset.k, v = state.count[k] + Number(b.dataset.d);
+      if (v < 0 || v > 10) return;
+      state.count[k] = v; state.mamTouched = true;
+      renderPackage();
+    });
+  });
+  $('nudge').addEventListener('click', function (e) { var b = e.target.closest('[data-switch]'); if (b) setCat(b.dataset.switch); });
+  form.sqft.addEventListener('input', function () { readTier(); renderSummary(); });
+  $('noListing').addEventListener('change', function () {
+    $('homeFields').hidden = noListing();
+    $('err0').textContent = '';
+    if (noListing()) { state.count = { q: 0, g: 0, e: 0 }; state.mamTouched = true; setCat('mammoth'); }
+    else renderSummary();
+  });
+  form.addEventListener('change', function (e) {
+    if (e.target.name === 'cat') setCat(e.target.value);
+    else if (e.target.name === 'addon') renderSummary();
+    else if (e.target.name === 'golive') { state.day = null; state.time = null; renderSummary(); }
+  });
+
+  backBtn.addEventListener('click', function () { if (state.step > 0) goTo(state.step - 1); });
+  nextBtn.addEventListener('click', function () {
+    if (!validate(state.step)) return;
+    if (state.step < 3) { goTo(state.step + 1); return; }
+    var q = quote();
+    var what = isKickoff() ? 'Your kickoff call' : 'Your shoot at ' + form.addr.value.trim();
+    $('doneText').textContent = what + ' is set for ' + fmtDate(state.day) + ' at ' + state.time + '.';
+    $('doneEmail').textContent = form.email.value;
+    $('donePhone').textContent = form.phone.value;
+    $('offer').hidden = cat() === 'mammoth';
+    $('offerText').textContent = 'Start The Mammoth in the next 7 days and today’s ' + money(q.total) + ' counts toward your first month. You get 2 Content Kits and 16 posts every month.';
+    form.hidden = true;
+    document.querySelector('.book-note').hidden = true;
+    $('stepper').hidden = true;
+    $('donePanel').hidden = false;
+    $('sumLabel').textContent = 'Paid';
+    renderMbar();
+  });
+
+  // "Book" buttons in the pricing tables preselect the package (and size, if the home isn't filled in yet).
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('[data-book]'); if (!a) return;
+    if (a.dataset.tier) { state.preset = tierByKey(a.dataset.tier); readTier(); }
+    if (!$('donePanel').hidden) return;
+    setCat(a.dataset.book);
+    goTo(0);
+  });
+
+
+  /* ---------- Showcase, before/after, quotes (media comes from /assets/real-estate-media.js) ---------- */
+  var MEDIA = window.BMM_RE_MEDIA || {};
+  var HOUSE = '<svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#house"/></svg>';
+  function isVideoFile(s) { return /\.(mp4|webm|mov)(\?|$)/i.test(s); }
+  function embedUrl(s) {
+    var m = s.match(/youtu\.be\/([\w-]+)|youtube\.com\/(?:watch\?v=|shorts\/)([\w-]+)/);
+    if (m) return 'https://www.youtube.com/embed/' + (m[1] || m[2]);
+    m = s.match(/vimeo\.com\/(\d+)/);
+    return m ? 'https://player.vimeo.com/video/' + m[1] : s;
+  }
+  // One media slot: the real file if it's filled in, otherwise a labeled placeholder.
+  // `look` only styles the placeholder: day, dusk, inside, video or tour.
+  function slot(item, look) {
+    item = item || {};
+    if (item.src) {
+      if (look === 'video') {
+        return '<div class="media-slot">' + (isVideoFile(item.src)
+          ? '<video src="' + esc(item.src) + '"' + (item.poster ? ' poster="' + esc(item.poster) + '"' : '') + ' controls playsinline preload="none"></video>'
+          : '<iframe src="' + esc(embedUrl(item.src)) + '" title="' + esc(item.label || 'Listing video') + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>') + '</div>';
+      }
+      return '<div class="media-slot"><img src="' + esc(item.src) + '" alt="' + esc(item.alt || item.label || 'Listing photo') + '" loading="lazy">' + (item.label ? '<span class="mcap">' + esc(item.label) + '</span>' : '') + '</div>';
+    }
+    var cls = look === 'inside' || look === 'tour' ? ' inside' : look === 'day' ? ' daylight' : '';
+    var extra = look === 'video' ? '<span class="play-btn"></span>' : look === 'tour' ? '<span class="tour-ic">3D walkthrough</span>' : '';
+    return '<div class="media-slot re-photo' + cls + '">' + (look === 'inside' || look === 'tour' ? '' : HOUSE) + extra + '<span class="ph">Placeholder · ' + esc(item.label || '') + '</span></div>';
+  }
+  var SHOW = {
+    photos: { cap: '<b>MLS-ready photos</b>, edited and sized for the MLS, Instagram and print. In every package.',
+      html: function () { var p = MEDIA.photos || [], looks = ['day', 'inside', 'inside', 'inside', 'dusk']; return '<div class="sv sv-photos">' + looks.map(function (l, i) { return slot(p[i], l); }).join('') + '</div>'; } },
+    video: { cap: '<b>Vertical video</b> for Reels and TikTok: listing Reels, walkthroughs and agent intros. In Full Service, Content Kits and The Mammoth.',
+      html: function () { var v = MEDIA.videos || [{ label: 'Listing Reel' }, { label: 'Walkthrough' }, { label: 'Agent intro' }]; return '<div class="sv sv-reels">' + v.map(function (x) { return slot(x, 'video'); }).join('') + '</div>'; } },
+    drone: { cap: '<b>Aerial photos</b> that show the lot, the street and what’s nearby. In every package.',
+      html: function () { var d = MEDIA.drone || []; return '<div class="sv sv-pair">' + slot(d[0], 'day') + slot(d[1], 'day') + '</div>'; } },
+    tour: { cap: '<b>A 3D walkthrough</b> buyers can explore from their phone, any time. In Full Service, Content Kits and The Mammoth.',
+      html: function () {
+        var t = MEDIA.tour || {};
+        return '<div class="sv sv-tour">' + (t.url
+          ? '<div class="media-slot"><iframe src="' + esc(t.url) + '" title="3D tour" allow="xr-spatial-tracking; fullscreen" allowfullscreen loading="lazy"></iframe></div>'
+          : slot({ label: t.label || '3D tour' }, 'tour')) + '</div>';
+      } },
+    twilight: { cap: '<b>Golden-hour exteriors</b> that stop the scroll. In every package.',
+      html: function () { var w = MEDIA.twilight || []; return '<div class="sv sv-pair">' + slot(w[0], 'dusk') + slot(w[1], 'dusk') + '</div>'; } }
+  };
+  function renderShow(k) {
+    document.querySelectorAll('#showTabs button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.show === k); });
+    $('showPanel').innerHTML = SHOW[k].html();
+    $('showCap').innerHTML = SHOW[k].cap;
+  }
+  document.querySelectorAll('#showTabs button').forEach(function (b) { b.addEventListener('click', function () { renderShow(b.dataset.show); }); });
+
+  function renderBeforeAfter() {
+    var ba = MEDIA.beforeAfter || {}, label = esc(ba.label || 'Living room');
+    $('baBefore').innerHTML = ba.before ? '<img src="' + esc(ba.before) + '" alt="' + label + ', unedited">' : '<div class="re-photo inside ba-dull"><span class="ph" style="left:auto;right:14px;">Placeholder · unedited</span></div>';
+    $('baAfter').innerHTML = ba.after ? '<img src="' + esc(ba.after) + '" alt="' + label + ', shot by Big Mammoth Media">' : '<div class="re-photo inside"><span class="ph" style="left:auto;right:14px;">Placeholder · our photo</span></div>';
+    var range = $('baRange');
+    range.addEventListener('input', function () { $('ba').style.setProperty('--pos', range.value + '%'); });
+  }
+
+  function renderQuotes() {
+    var q = (MEDIA.quotes || []).filter(function (x) { return x.quote; });
+    $('quotes').innerHTML = q.length
+      ? q.map(function (x) { return '<div class="testi-card"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;' + esc(x.quote) + '&rdquo;</p><div class="testi-name">' + esc(x.name) + '</div><div class="small-note">' + esc(x.role) + '</div></div>'; }).join('')
+      : [1, 2, 3].map(function () { return '<div class="testi-card quote-ph"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Placeholder: a quote from an agent you’ve shot for.</p><div class="testi-name">Agent name</div><div class="small-note">Brokerage</div></div>'; }).join('');
+  }
+
+  // Hero phones and Content Kit tiles: swap the illustrations for real work when it's set.
+  (function fillPhones() {
+    (MEDIA.heroPhones || []).forEach(function (m, i) {
+      var s = document.querySelector('[data-phone="' + i + '"]');
+      if (!s || !m.src) return;
+      s.classList.add('real');
+      s.querySelectorAll('.re-photo, .cap, .play').forEach(function (el) { el.remove(); });
+      s.insertAdjacentHTML('afterbegin', m.video
+        ? '<video src="' + esc(m.video) + '" poster="' + esc(m.src) + '" autoplay muted loop playsinline aria-hidden="true"></video>'
+        : '<img src="' + esc(m.src) + '" alt="" loading="eager">');
+      var tag = s.querySelector('.tag');
+      if (tag && m.tag) tag.textContent = m.tag;
+    });
+  })();
+  (function fillKit() {
+    var kit = MEDIA.kit || {};
+    document.querySelectorAll('[data-kit]').forEach(function (item) {
+      var m = kit[item.dataset.kit], ph = item.querySelector('.re-photo');
+      if (!m || !m.src || !ph) return;
+      var lbl = ph.querySelector('.lbl');
+      var box = document.createElement('div');
+      box.className = 'kit-media';
+      box.innerHTML = '<img src="' + esc(m.src) + '" alt="' + esc(m.alt || '') + '" loading="lazy">' + (m.video ? '<span class="play-btn" aria-hidden="true"></span>' : '');
+      if (lbl) box.appendChild(lbl);
+      ph.replaceWith(box);
+    });
+  })();
+
+  // Optional hero photo or video.
+  (function heroMedia() {
+    var h = MEDIA.hero || {}, hero = document.querySelector('.hero');
+    if (!hero || !(h.image || h.video)) return;
+    hero.classList.add('hero--media');
+    if (h.video) hero.insertAdjacentHTML('afterbegin', '<video class="hero-bg-video" src="' + esc(h.video) + '" autoplay muted loop playsinline' + (h.image ? ' poster="' + esc(h.image) + '"' : '') + '></video>');
+    else hero.style.backgroundImage = 'url("' + h.image.replace(/"/g, '%22') + '")';
+  })();
+
+  /* ---------- Sticky booking bar (phones) ---------- */
+  var mbar = $('mbar'), seen = { book: false, hero: true };
+  function renderMbar() {
+    if (!mbar) return;
+    // Measured on every update, so the bar is right even if a scroll event is missed.
+    var vh = window.innerHeight, hero = document.querySelector('.hero-ctas').getBoundingClientRect(), bk = document.querySelector('.book').getBoundingClientRect();
+    seen.hero = hero.bottom > 0 && hero.top < vh;
+    seen.book = bk.top < vh / 2 && bk.bottom > vh / 2;
+    var done = !$('donePanel').hidden;
+    mbar.classList.toggle('show', !seen.hero && !done);
+    var lbl = $('mbarLbl'), amt = $('mbarAmt'), btn = $('mbarBtn');
+    if (seen.book && !done) {
+      var priced = cat() === 'mammoth' || state.tier;
+      lbl.textContent = priced ? (cat() === 'mammoth' ? 'First month' : 'Due today') : 'Your price';
+      amt.textContent = priced ? money(quote().total) : 'Add sq ft';
+      btn.textContent = state.step < 3 ? 'Continue' : 'Pay & Book';
+      btn.dataset.mode = 'next';
+    } else {
+      lbl.textContent = 'Listings from';
+      amt.textContent = money(PKG.photo.price.q);
+      btn.textContent = 'Book a Shoot';
+      btn.dataset.mode = 'book';
+    }
+  }
+  // Show the bar once the hero buttons are scrolled past; switch to "Continue" while the booking form crosses mid-screen.
+  function checkMbar() { renderMbar(); }
+  window.addEventListener('scroll', checkMbar, { passive: true });
+  window.addEventListener('resize', checkMbar);
+  $('mbarBtn').addEventListener('click', function () {
+    if (this.dataset.mode === 'next') nextBtn.click();
+    document.querySelector(this.dataset.mode === 'next' ? '.book-main' : '#book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  renderShow('photos');
+  renderBeforeAfter();
+  renderQuotes();
+
+  renderPricing();
+  setCat('full');
+  goTo(0);
+  checkMbar();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample Listing Link | Big Mammoth Media</title>
+<meta name="description" content="An example of the branded listing page included with every Big Mammoth Media Content Kit.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="https://framerusercontent.com/images/RjYs2ZV5pWaFayY0D1kziPGAlM.png?width=1080&height=1350">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* A sample of an agent's listing link. It uses the agent's brand, not Big Mammoth's, so it's deliberately light and different from the main site. */
+:root{--brand:#1f4d3a;--brand-ink:#fff;--brand-soft:#e7efe9;--ink:#16181d;--body:#454b57;--muted:#7a808c;--line:#e6e2da;--bg:#faf8f4;--card:#fff;--radius:16px;
+  --serif:"Fraunces",Georgia,serif;--sans:"Inter Tight","Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--body);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);color:var(--ink);font-weight:600;line-height:1.1;margin:0 0 .4em;letter-spacing:-.01em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+.demo{background:#00020f;color:#c4c8d4;font-size:14px}
+.demo .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+.demo b{color:#fff}
+.demo a{color:#ccd7ff;font-weight:600;text-decoration:none;white-space:nowrap}
+.swatches{display:flex;align-items:center;gap:8px}
+.swatches span{color:#a7adbe}
+.swatches button{width:24px;height:24px;border-radius:50%;border:2px solid rgba(255,255,255,.25);cursor:pointer;padding:0}
+.swatches button[aria-pressed="true"]{border-color:#fff;box-shadow:0 0 0 2px #00020f,0 0 0 4px #fff}
+
+.agentbar{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.agentbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+.agent{display:flex;align-items:center;gap:12px}
+.mono{width:42px;height:42px;border-radius:50%;background:var(--brand);color:var(--brand-ink);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:16px}
+.agent strong{display:block;color:var(--ink);font-size:15px;line-height:1.2}
+.agent small{color:var(--muted);font-size:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:11px 20px;font:600 14.5px var(--sans);cursor:pointer;border:1px solid transparent;text-decoration:none;transition:filter .15s ease}
+.btn:hover{filter:brightness(1.08)}
+.btn-brand{background:var(--brand);color:var(--brand-ink)}
+.btn-line{background:transparent;border-color:var(--line);color:var(--ink)}
+.acts{display:flex;gap:8px}
+
+.ph-box{position:relative;overflow:hidden;background:linear-gradient(160deg,#d9d2c4,#b9ab93);border-radius:var(--radius)}
+.ph-box.day{background:linear-gradient(180deg,#9cc9ff 0%,#cfe5ff 55%,#e8f1ff 100%)}
+.ph-box.dusk{background:linear-gradient(180deg,#f7b267 0%,#f4845f 38%,#5b3a6b 72%,#1d1a3a 100%)}
+.ph-box svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:62%}
+/* The house drawing is reused through <use>, so its colors come in as inherited variables. */
+.ph-box{--house:#2a3352;--win:#ffe9a8;--ground:#5f8f5a}
+.ph-box.dusk{--house:#151634;--win:#ffd27a;--ground:#141533}
+.ph-box .ph{position:absolute;left:12px;bottom:10px;font-size:12px;font-weight:600;color:#fff;background:rgba(0,0,0,.45);padding:4px 10px;border-radius:999px}
+.ph-box img,.ph-box video,.ph-box iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
+.ph-box .play{position:absolute;top:50%;left:50%;width:62px;height:62px;margin:-31px 0 0 -31px;border-radius:50%;background:rgba(255,255,255,.35);backdrop-filter:blur(6px)}
+.ph-box .play::after{content:"";position:absolute;left:24px;top:19px;border-left:18px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent}
+
+.hero{padding:28px 0 0}
+.hero-grid{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:240px 240px;gap:12px}
+.hero-grid > :first-child{grid-row:span 2}
+.status{position:absolute;top:16px;left:16px;z-index:2;background:var(--brand);color:var(--brand-ink);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+
+.facts{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:48px;padding-top:36px;padding-bottom:20px;align-items:start}
+.price{font-family:var(--serif);font-size:44px;color:var(--ink);line-height:1}
+.addr{font-size:18px;color:var(--ink);margin:10px 0 18px}
+.stats{display:flex;gap:28px;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:24px}
+.stats div{font-size:14px;color:var(--muted)}
+.stats b{display:block;font-family:var(--serif);font-size:24px;color:var(--ink);font-weight:600}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 20px 40px -30px rgba(0,0,0,.25)}
+.sticky{position:sticky;top:90px}
+.card h3{font-size:22px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:5px}
+.field input,.field select{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;font:15px var(--sans);background:var(--bg);color:var(--ink)}
+.field input:focus,.field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.note{font-size:13px;color:var(--muted);margin:10px 0 0}
+.ok{background:var(--brand-soft);color:var(--brand);border-radius:10px;padding:12px;font-size:14px;font-weight:600;margin-top:12px}
+
+section{padding:40px 0}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:18px}
+.sec-h h2{font-size:30px;margin:0}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gallery .ph-box{aspect-ratio:4/3}
+.media2{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:16px}
+.media2 .ph-box{aspect-ratio:9/16}
+.media2 .ph-box.tour{aspect-ratio:auto;min-height:320px}
+.ph-box video{object-fit:cover;background:#000}
+.meet{display:grid;grid-template-columns:260px minmax(0,1fr);gap:28px;align-items:center}
+.meet .ph-box{aspect-ratio:9/16}
+
+footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .facts{grid-template-columns:1fr;gap:24px}
+  .sticky{position:static}
+  .gallery{grid-template-columns:1fr 1fr}
+  .media2,.meet{grid-template-columns:1fr}
+  .meet .ph-box,.media2 .ph-box:not(.tour){max-width:320px}
+  .media2 .ph-box.tour{aspect-ratio:4/3;min-height:0}
+}
+@media (max-width:640px){
+  .hero-grid{grid-template-columns:1fr 1fr;grid-template-rows:240px 120px}
+  .hero-grid > :first-child{grid-column:span 2;grid-row:auto}
+  .agent small{display:none}
+  .acts .btn-line{display:none}
+  .price{font-size:36px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="house" viewBox="0 0 400 220">
+    <rect x="0" y="190" width="400" height="30" style="fill:var(--ground)"/>
+    <path style="fill:var(--house)" d="M70 190V112l70-52 70 52v78zM190 190V96l62-44 62 44v94zM300 190v-62h70v62z"/>
+    <g style="fill:var(--win)"><rect x="96" y="128" width="22" height="26" rx="2"/><rect x="162" y="128" width="22" height="26" rx="2"/><rect x="128" y="150" width="24" height="40" rx="2"/><rect x="216" y="104" width="20" height="24" rx="2"/><rect x="268" y="104" width="20" height="24" rx="2"/><rect x="216" y="146" width="72" height="30" rx="2"/><rect x="318" y="148" width="34" height="18" rx="2"/></g>
+  </symbol>
+</svg>
+
+<div class="demo"><div class="wrap">
+  <span><b>Sample listing link.</b> Every Content Kit includes a page like this, in your branding.</span>
+  <div class="swatches" role="group" aria-label="Try a brand color"><span>Try your brand color:</span>
+    <button type="button" data-c="#1f4d3a" aria-pressed="true" aria-label="Forest green" style="background:#1f4d3a"></button>
+    <button type="button" data-c="#1d3557" aria-pressed="false" aria-label="Navy" style="background:#1d3557"></button>
+    <button type="button" data-c="#9c4a2f" aria-pressed="false" aria-label="Terracotta" style="background:#9c4a2f"></button>
+    <button type="button" data-c="#111111" aria-pressed="false" aria-label="Black" style="background:#111111"></button>
+  </div>
+  <a href="/real-estate#kits">&larr; Back to Content Kits</a>
+</div></div>
+
+<header class="agentbar"><div class="wrap">
+  <div class="agent"><div class="mono">YN</div><div><strong>Your Name</strong><small>Your Brokerage</small></div></div>
+  <div class="acts"><a class="btn btn-line" href="#showing">Text me</a><a class="btn btn-brand" href="#showing">Schedule a showing</a></div>
+</div></header>
+
+<main>
+  <div class="hero"><div class="wrap">
+    <div class="hero-grid" id="heroGrid"></div>
+  </div></div>
+
+  <div class="wrap facts">
+    <div>
+      <div class="price">$389,000</div>
+      <div class="addr">1234 Maple Street, Broken Arrow, OK</div>
+      <div class="stats"><div><b>4</b>Beds</div><div><b>3</b>Baths</div><div><b>2,450</b>Sq ft</div><div><b>0.31</b>Acres</div></div>
+      <h2 style="font-size:26px;">Room to grow on a quiet Broken Arrow street</h2>
+      <p>This is sample copy. On your real link, this space holds the listing description. Open-concept living, an updated kitchen with an island, a primary suite with a walk-in closet, and a fenced backyard with a covered patio.</p>
+    </div>
+    <aside class="card sticky" id="showing">
+      <h3>Schedule a showing</h3>
+      <p style="margin-top:-4px;">Pick a time and I'll confirm by text.</p>
+      <form id="showForm" novalidate>
+        <div class="field"><label for="sName">Name</label><input id="sName" autocomplete="name"></div>
+        <div class="field"><label for="sPhone">Mobile</label><input id="sPhone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="sWhen">When works?</label><select id="sWhen"><option>This weekend</option><option>Weekday evening</option><option>As soon as possible</option></select></div>
+        <button class="btn btn-brand" type="submit" style="width:100%;">Request a showing</button>
+        <p class="note">Sample page: nothing is sent. On your real link, requests text straight to your phone.</p>
+        <div class="ok" id="showOk" hidden>Demo only. On your real link, this goes straight to you.</div>
+      </form>
+    </aside>
+  </div>
+
+  <section><div class="wrap">
+    <div class="sec-h"><h2>Photos</h2><span class="note" id="photoCount"></span></div>
+    <div class="gallery" id="gallery"></div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sec-h"><h2>Video &amp; 3D tour</h2></div>
+    <div class="media2" id="media2"></div>
+  </div></section>
+
+  <section><div class="wrap meet">
+    <div id="introSlot"></div>
+    <div>
+      <h2 style="font-size:30px;">Meet your agent</h2>
+      <p>This is where your agent intro video lives: you on camera, introducing the home. Buyers get to know you before they ever call, and sellers scrolling past see who they'll hire next.</p>
+      <a class="btn btn-brand" href="#showing">Schedule a showing</a>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>Listing courtesy of Your Brokerage. Information deemed reliable but not guaranteed.</span>
+  <span>Media by Big Mammoth Media</span>
+</div></footer>
+
+<script src="/assets/real-estate-media.js?v=1"></script>
+<script>
+(function () {
+  var M = window.BMM_RE_MEDIA || {};
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  var HOUSE = '<svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#house"/></svg>';
+  function isVideoFile(s) { return /\.(mp4|webm|mov)(\?|$)/i.test(s); }
+  function embedUrl(s) {
+    var m = s.match(/youtu\.be\/([\w-]+)|youtube\.com\/(?:watch\?v=|shorts\/)([\w-]+)/);
+    if (m) return 'https://www.youtube.com/embed/' + (m[1] || m[2]);
+    m = s.match(/vimeo\.com\/(\d+)/);
+    return m ? 'https://player.vimeo.com/video/' + m[1] : s;
+  }
+  function box(item, look, extraCls, inner) {
+    item = item || {};
+    var cls = 'ph-box' + (look ? ' ' + look : '') + (extraCls ? ' ' + extraCls : '');
+    if (item.src) {
+      var media = look === 'video'
+        ? (isVideoFile(item.src) ? '<video src="' + esc(item.src) + '"' + (item.poster ? ' poster="' + esc(item.poster) + '"' : '') + ' controls playsinline preload="none"></video>' : '<iframe src="' + esc(embedUrl(item.src)) + '" title="Video" allowfullscreen loading="lazy"></iframe>')
+        : '<img src="' + esc(item.src) + '" alt="' + esc(item.alt || item.label || '') + '" loading="lazy">';
+      return '<div class="' + cls + '">' + media + (inner || '') + '</div>';
+    }
+    var house = look === 'day' || look === 'dusk' ? HOUSE : '';
+    return '<div class="' + cls + '">' + house + (look === 'video' ? '<span class="play"></span>' : '') + (inner || '') + '<span class="ph">Placeholder · ' + esc(item.label || '') + '</span></div>';
+  }
+  var photos = M.photos || [];
+  document.getElementById('heroGrid').innerHTML =
+    box(photos[1], 'day', '', '<span class="status">Just Listed</span>') + box((M.twilight || [])[0], 'dusk') + box(photos[0], '');
+  var all = photos.concat(M.drone || [], M.twilight || []);
+  document.getElementById('gallery').innerHTML = all.map(function (p, i) { return box(p, i === 0 || i >= photos.length ? (i >= photos.length + (M.drone || []).length ? 'dusk' : 'day') : ''); }).join('');
+  document.getElementById('photoCount').textContent = all.length + ' photos shown · the full set on your real link';
+  var tour = M.tour || {};
+  var vids = M.videos || [];
+  document.getElementById('media2').innerHTML = box(vids[0] || { label: 'Listing Reel' }, 'video') +
+    (tour.url ? '<div class="ph-box tour"><iframe src="' + esc(tour.url) + '" title="3D tour" allow="xr-spatial-tracking; fullscreen" allowfullscreen loading="lazy"></iframe></div>' : box({ label: '3D tour' }, '', 'tour'));
+  document.getElementById('introSlot').innerHTML = box(vids[2] || { label: 'Agent intro video' }, 'video');
+
+  document.querySelectorAll('.swatches button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.documentElement.style.setProperty('--brand', b.dataset.c);
+      document.querySelectorAll('.swatches button').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+    });
+  });
+  document.getElementById('showForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('showOk').hidden = false;
+  });
+})();
+</script>
+</body>
+</html>
